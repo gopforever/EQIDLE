@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EQIDLE — EverQuest Idle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+
+<!-- Character Creation Modal -->
+<div id="char-creation-modal" class="modal-overlay">
+  <div class="modal">
+    <h2>Create Your Character</h2>
+    <div class="form-group">
+      <label for="char-name-input">Character Name</label>
+      <input type="text" id="char-name-input" placeholder="Enter your name..." maxlength="24" />
+    </div>
+    <div class="form-group">
+      <label for="char-class-select">Class</label>
+      <select id="char-class-select">
+        <option value="">-- Select Class --</option>
+        <option value="warrior">Warrior</option>
+        <option value="paladin">Paladin</option>
+        <option value="shadowknight">Shadow Knight</option>
+        <option value="ranger">Ranger</option>
+        <option value="bard">Bard</option>
+        <option value="rogue">Rogue</option>
+        <option value="monk">Monk</option>
+        <option value="beastlord">Beastlord</option>
+        <option value="berserker">Berserker</option>
+        <option value="cleric">Cleric</option>
+        <option value="druid">Druid</option>
+        <option value="shaman">Shaman</option>
+        <option value="wizard">Wizard</option>
+        <option value="magician">Magician</option>
+        <option value="enchanter">Enchanter</option>
+        <option value="necromancer">Necromancer</option>
+      </select>
+    </div>
+    <button id="char-create-btn" class="btn btn-gold" style="width:100%;margin-top:8px;">Enter Norrath</button>
+  </div>
+</div>
+
+<!-- Main App -->
+<div id="app">
+  <!-- Sidebar -->
+  <nav id="sidebar">
+    <div id="sidebar-header">
+      <div id="sidebar-title">EQIDLE</div>
+    </div>
+    <div class="sidebar-nav"></div>
+  </nav>
+
+  <!-- Main Content -->
+  <div id="main">
+    <!-- Header -->
+    <header id="header">
+      <div id="header-title">EverQuest Idle</div>
+      <div class="header-stat">Char: <span id="char-name">—</span></div>
+      <div class="header-stat"><span id="char-level">Lv 1</span></div>
+      <div class="header-stat"><span id="char-class">—</span></div>
+      <div class="header-stat">Zone: <span id="current-zone">—</span></div>
+    </header>
+
+    <!-- Panels -->
+    <div id="content">
+      <div id="panels">
+
+        <!-- Combat Panel -->
+        <section id="panel-combat" class="panel panel-active">
+          <h2 class="panel-title">⚔️ Combat</h2>
+          <div class="combat-layout">
+            <div class="combat-col">
+              <div id="player-stats"></div>
+              <div id="zone-select"></div>
+              <div id="spell-bar"></div>
+            </div>
+            <div class="combat-col">
+              <div id="enemy-display">
+                <div class="no-enemy">Select a zone and start attacking!</div>
+              </div>
+            </div>
+            <div class="combat-col">
+              <div id="loot-log">
+                <div class="loot-log-title">Recent Loot</div>
+                <ul class="loot-list"><li class="muted">No loot yet.</li></ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Skills Panel -->
+        <section id="panel-skills" class="panel">
+          <h2 class="panel-title">📊 Skills</h2>
+          <div id="skills-content">Loading skills...</div>
+        </section>
+
+        <!-- Crafting Panel -->
+        <section id="panel-crafting" class="panel">
+          <h2 class="panel-title">🔨 Crafting</h2>
+          <div id="crafting-content">
+            <p class="muted">Select a tradeskill below to craft items.</p>
+            <div id="tradeskill-list"></div>
+          </div>
+        </section>
+
+        <!-- Zones Panel -->
+        <section id="panel-zones" class="panel">
+          <h2 class="panel-title">🗺️ Zones</h2>
+          <div id="zones-content">Loading zones...</div>
+        </section>
+
+        <!-- Factions Panel -->
+        <section id="panel-factions" class="panel">
+          <h2 class="panel-title">🏰 Factions</h2>
+          <div id="factions-content">Loading factions...</div>
+        </section>
+
+        <!-- Alternate Advancement Panel -->
+        <section id="panel-aa" class="panel">
+          <h2 class="panel-title">✨ Alternate Advancement</h2>
+          <div id="aa-content">
+            <p class="muted">AA points become available at level 51.</p>
+            <div id="aa-points-display"></div>
+            <div id="aa-abilities-list"></div>
+          </div>
+        </section>
+
+        <!-- Inventory Panel -->
+        <section id="panel-inventory" class="panel">
+          <h2 class="panel-title">🎒 Inventory</h2>
+          <div id="gold-inv-display" style="margin-bottom:12px;color:var(--gold);"></div>
+          <div id="inventory-grid" class="inventory-grid"></div>
+        </section>
+
+        <!-- Settings Panel -->
+        <section id="panel-settings" class="panel">
+          <h2 class="panel-title">⚙️ Settings</h2>
+          <div id="settings-content">
+            <div class="form-group">
+              <label>Auto Save</label>
+              <label>
+                <input type="checkbox" id="setting-autosave" checked />
+                Enable automatic saving every 30 seconds
+              </label>
+            </div>
+            <div style="margin-top:16px;display:flex;gap:8px;flex-wrap:wrap;">
+              <button id="btn-export-save" class="btn">📤 Export Save</button>
+              <button id="btn-import-save" class="btn">📥 Import Save</button>
+              <button id="btn-delete-save" class="btn" style="color:var(--hp);">🗑️ Delete Save</button>
+            </div>
+            <div id="export-output" style="margin-top:12px;display:none;">
+              <label>Save Data (copy this):</label>
+              <textarea id="export-textarea" style="width:100%;height:80px;background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:4px;padding:8px;font-size:11px;margin-top:4px;" readonly></textarea>
+            </div>
+            <div id="import-area" style="margin-top:12px;display:none;">
+              <label>Paste Save Data:</label>
+              <textarea id="import-textarea" style="width:100%;height:80px;background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:4px;padding:8px;font-size:11px;margin-top:4px;"></textarea>
+              <button id="btn-import-confirm" class="btn btn-gold" style="margin-top:8px;">Import</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- World Panel (Ghosts / Auction / Chat) -->
+        <section id="panel-world" class="panel">
+          <h2 class="panel-title">🌐 World</h2>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;height:calc(100% - 60px);">
+            <div>
+              <div class="section-header">👥 Who's Online</div>
+              <div id="who-online" style="overflow-y:auto;max-height:250px;">
+                <table class="ghost-list">
+                  <thead><tr><th>Name</th><th>Class</th><th>Level</th><th>Zone</th></tr></thead>
+                  <tbody id="who-online-body"></tbody>
+                </table>
+              </div>
+              <div class="section-header" style="margin-top:16px;">💬 Chat Feed</div>
+              <div id="chat-feed" class="chat-feed"></div>
+            </div>
+            <div>
+              <div class="section-header">🏪 Auction House</div>
+              <div style="overflow-y:auto;max-height:400px;">
+                <table class="auction-table">
+                  <thead><tr><th>Item</th><th>Seller</th><th>Price</th><th></th></tr></thead>
+                  <tbody id="auction-house-body"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div><!-- end #panels -->
+    </div><!-- end #content -->
+
+    <!-- Status Bar -->
+    <footer id="status-bar">
+      <span>Action: <span id="current-action">Idle</span></span>
+      <span>XP/hr: <span id="xp-per-hour">0</span></span>
+      <span>Gold: <span id="gold-display">0gp</span></span>
+      <span>Tick: <span id="tick-display">0</span></span>
+    </footer>
+  </div><!-- end #main -->
+</div><!-- end #app -->
+
+<div id="notifications-container"></div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

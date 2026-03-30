@@ -1,0 +1,342 @@
+[
+  {
+    "id": "qeynos_hills",
+    "name": "Qeynos Hills",
+    "description": "Rolling green hills surrounding the city of Qeynos. A safe starting area for new adventurers with mild wildlife.",
+    "expansion": "classic",
+    "levelRange": { "min": 1, "max": 6 },
+    "factionRequired": null,
+    "monsters": ["hill_snake", "wolf_pup", "bandit"],
+    "boss": {
+      "id": "bandit",
+      "name": "Bandit Leader",
+      "spawnChance": 0.05,
+      "loot": ["rusty_dagger", "leather_cord"],
+      "respawnTicks": 300
+    },
+    "resources": ["wolf_fur", "snake_scales", "forageable_plants"]
+  },
+  {
+    "id": "east_commonlands",
+    "name": "East Commonlands",
+    "description": "A wide open plain criss-crossed by trade routes. Orcs and dark elves lurk near the highway.",
+    "expansion": "classic",
+    "levelRange": { "min": 5, "max": 20 },
+    "factionRequired": null,
+    "monsters": ["orc_highway_man", "dark_elf_necromancer", "hill_giant_tracker"],
+    "boss": {
+      "id": "hill_giant_tracker",
+      "name": "Hill Giant",
+      "spawnChance": 0.04,
+      "loot": ["giant_warrior_helm", "wolf_fur"],
+      "respawnTicks": 600
+    },
+    "resources": ["wolf_fur", "bat_wing", "orc_fang"]
+  },
+  {
+    "id": "misty_thicket",
+    "name": "Misty Thicket",
+    "description": "A fog-shrouded woodland on the outskirts of Rivervale. Home to halflings and various woodland creatures.",
+    "expansion": "classic",
+    "levelRange": { "min": 3, "max": 12 },
+    "factionRequired": null,
+    "monsters": ["wolf_pup", "bandit", "hill_snake"],
+    "boss": {
+      "id": "bandit",
+      "name": "Runnyeye Goblin",
+      "spawnChance": 0.05,
+      "loot": ["leather_cord", "gnoll_fang"],
+      "respawnTicks": 400
+    },
+    "resources": ["wolf_fur", "forageable_plants", "spider_silk"]
+  },
+  {
+    "id": "crushbone",
+    "name": "Crushbone",
+    "description": "The fortified stronghold of the Crushbone orc clan deep in Faydark. Dangerous at every level — orcs attack on sight.",
+    "expansion": "classic",
+    "levelRange": { "min": 5, "max": 18 },
+    "factionRequired": null,
+    "monsters": ["orc_pawn", "orc_legionnaire", "orc_warlord", "orc_centurion", "orc_centurion_elite", "orc_legionmaster"],
+    "boss": {
+      "id": "emperor_crushbone",
+      "name": "Emperor Crushbone",
+      "spawnChance": 0.03,
+      "loot": ["rubicite_breastplate", "bronze_sword", "journeymans_boots"],
+      "respawnTicks": 1200
+    },
+    "resources": ["orc_fang", "banded_helm", "banded_breastplate"]
+  },
+  {
+    "id": "blackburrow",
+    "name": "Blackburrow",
+    "description": "A labyrinthine gnoll burrow beneath the hills of Antonica. The home of the gnoll clan and their leader Fippy Darkpaw.",
+    "expansion": "classic",
+    "levelRange": { "min": 2, "max": 10 },
+    "factionRequired": null,
+    "monsters": ["gnoll_pup", "gnoll_guard", "fippy_darkpaw"],
+    "boss": {
+      "id": "fippy_darkpaw",
+      "name": "Fippy Darkpaw",
+      "spawnChance": 0.05,
+      "loot": ["gnoll_fang", "rusty_short_sword", "bronze_dagger"],
+      "respawnTicks": 720
+    },
+    "resources": ["gnoll_fang", "leather_cord", "wolf_fur"]
+  },
+  {
+    "id": "unrest",
+    "name": "Estate of Unrest",
+    "description": "A haunted mansion filled with the undead. Strange noises echo through the halls of this cursed estate.",
+    "expansion": "classic",
+    "levelRange": { "min": 10, "max": 25 },
+    "factionRequired": null,
+    "monsters": ["decaying_skeleton", "skeleton", "rotting_skeleton", "ghoul"],
+    "boss": {
+      "id": "ghoul",
+      "name": "Ghoul Arch Mage",
+      "spawnChance": 0.04,
+      "loot": ["bone_chips", "bat_wing", "rusty_dagger"],
+      "respawnTicks": 900
+    },
+    "resources": ["bone_chips", "bat_wing", "spider_silk"]
+  },
+  {
+    "id": "befallen",
+    "name": "Befallen",
+    "description": "A ruined keep overrun with undead. Three levels of increasingly powerful skeletal creatures guard the cursed halls.",
+    "expansion": "classic",
+    "levelRange": { "min": 7, "max": 26 },
+    "factionRequired": null,
+    "monsters": ["decaying_skeleton", "rotting_skeleton", "ancient_skeleton", "skeleton", "skeleton_warrior", "skeleton_knight", "verix_kylox_w", "verix_kylox_m"],
+    "boss": {
+      "id": "verix_kylox",
+      "name": "Verix Kylox the Cursed",
+      "spawnChance": 0.03,
+      "loot": ["rubicite_breastplate", "banded_breastplate", "bone_chips"],
+      "respawnTicks": 1440
+    },
+    "resources": ["bone_chips", "bat_wing", "rusty_dagger"]
+  },
+  {
+    "id": "solusek_eye",
+    "name": "Solusek's Eye",
+    "description": "A volcanic dungeon carved into the heart of a mountain. Fire goblins and elementals roam corridors of superheated rock.",
+    "expansion": "classic",
+    "levelRange": { "min": 14, "max": 35 },
+    "factionRequired": null,
+    "monsters": ["fire_goblin", "magma_elemental", "lord_solusek"],
+    "boss": {
+      "id": "lord_solusek",
+      "name": "Lord Solusek",
+      "spawnChance": 0.03,
+      "loot": ["magma_shard", "rubicite_breastplate", "fire_goblin_skin"],
+      "respawnTicks": 1800
+    },
+    "resources": ["fire_goblin_skin", "magma_shard"]
+  },
+  {
+    "id": "nagafens_lair",
+    "name": "Nagafen's Lair",
+    "description": "The lair of Lord Nagafen, the great red dragon. Fire and death await all who enter this scorching cavern.",
+    "expansion": "classic",
+    "levelRange": { "min": 35, "max": 55 },
+    "factionRequired": null,
+    "monsters": ["hatchling", "wyrmling", "lord_nagafen"],
+    "boss": {
+      "id": "lord_nagafen",
+      "name": "Lord Nagafen",
+      "spawnChance": 0.02,
+      "loot": ["dragon_scales", "rubicite_breastplate", "manastone", "fbss"],
+      "respawnTicks": 7200
+    },
+    "resources": ["dragon_scales", "magma_shard"]
+  },
+  {
+    "id": "lower_guk",
+    "name": "Lower Guk",
+    "description": "The lower reaches of the ruined froglok city. The dead frogloks are now undead and extremely dangerous.",
+    "expansion": "classic",
+    "levelRange": { "min": 25, "max": 50 },
+    "factionRequired": null,
+    "monsters": ["ghoul", "revenant", "froglok_gaz", "froglok_knight", "maestro_of_rancor"],
+    "boss": {
+      "id": "maestro_of_rancor",
+      "name": "Maestro of Rancor",
+      "spawnChance": 0.02,
+      "loot": ["fbss", "fungi_tunic", "rubicite_breastplate"],
+      "respawnTicks": 5400
+    },
+    "resources": ["bone_chips", "bat_wing", "fbss"]
+  },
+  {
+    "id": "plane_of_fear",
+    "name": "Plane of Fear",
+    "description": "The hellish outer plane ruled by Cazic-Thule. Terror, Dread, and Fright roam these tortured lands along with their servants.",
+    "expansion": "classic",
+    "levelRange": { "min": 45, "max": 55 },
+    "factionRequired": null,
+    "monsters": ["spider", "giant_spider", "terror", "dread", "fright", "mistress_of_scorn"],
+    "boss": {
+      "id": "mistress_of_scorn",
+      "name": "Mistress of Scorn",
+      "spawnChance": 0.02,
+      "loot": ["rubicite_breastplate", "fungi_tunic", "spider_silk"],
+      "respawnTicks": 5400
+    },
+    "resources": ["spider_silk", "bat_wing"]
+  },
+  {
+    "id": "plane_of_hate",
+    "name": "Plane of Hate",
+    "description": "The domain of Innoruuk, Prince of Hate. His priests and servants dwell here plotting against the gods of light.",
+    "expansion": "classic",
+    "levelRange": { "min": 46, "max": 55 },
+    "factionRequired": null,
+    "monsters": ["innoruuk_priest", "magi_of_hate", "mistress_of_scorn_hate"],
+    "boss": {
+      "id": "mistress_of_scorn_hate",
+      "name": "Mistress of Scorn",
+      "spawnChance": 0.02,
+      "loot": ["rubicite_breastplate", "robe_of_the_oracle"],
+      "respawnTicks": 5400
+    },
+    "resources": ["bat_wing", "robe_of_the_oracle"]
+  },
+  {
+    "id": "field_of_bone",
+    "name": "Field of Bone",
+    "description": "A vast plain on the Kunark continent littered with the bones of ancient creatures. Iksar and undead roam freely.",
+    "expansion": "ruins_of_kunark",
+    "levelRange": { "min": 25, "max": 40 },
+    "factionRequired": null,
+    "monsters": ["iksar_brigand", "decaying_skeleton", "skeleton"],
+    "boss": {
+      "id": "iksar_brigand",
+      "name": "Iksar Shaman",
+      "spawnChance": 0.04,
+      "loot": ["dragon_scales", "bone_chips"],
+      "respawnTicks": 1800
+    },
+    "resources": ["bone_chips", "dragon_scales"]
+  },
+  {
+    "id": "frontier_mountains",
+    "name": "Frontier Mountains",
+    "description": "Rugged mountains on Kunark, home to giants and sarnak. High cliffs and dangerous terrain surround ancient sarnak strongholds.",
+    "expansion": "ruins_of_kunark",
+    "levelRange": { "min": 30, "max": 50 },
+    "factionRequired": null,
+    "monsters": ["iksar_warrior", "frost_giant", "iksar_brigand"],
+    "boss": {
+      "id": "frost_giant",
+      "name": "Giant Warchief",
+      "spawnChance": 0.03,
+      "loot": ["giant_warrior_helm", "dragon_scales"],
+      "respawnTicks": 2400
+    },
+    "resources": ["dragon_scales", "velium_ore"]
+  },
+  {
+    "id": "karnors_castle",
+    "name": "Karnor's Castle",
+    "description": "The ancient castle of the Kunark dragon Venril Sathir. Now ruled by his undead spirit, filled with undead Iksar and draconic minions.",
+    "expansion": "ruins_of_kunark",
+    "levelRange": { "min": 45, "max": 60 },
+    "factionRequired": null,
+    "monsters": ["iksar_brigand", "iksar_warrior", "venril_sathir"],
+    "boss": {
+      "id": "venril_sathir",
+      "name": "Venril Sathir",
+      "spawnChance": 0.02,
+      "loot": ["dragon_scales", "rubicite_breastplate", "manastone", "fbss"],
+      "respawnTicks": 7200
+    },
+    "resources": ["dragon_scales", "velium_ore"]
+  },
+  {
+    "id": "veeshan_peak",
+    "name": "Veeshan's Peak",
+    "description": "The ultimate dragon dungeon on Kunark. The most powerful dragons of the Ring of Scale dwell here.",
+    "expansion": "ruins_of_kunark",
+    "levelRange": { "min": 55, "max": 60 },
+    "factionRequired": "claws_of_veeshan",
+    "monsters": ["hatchling", "wyrmling", "lord_nagafen"],
+    "boss": {
+      "id": "lord_nagafen",
+      "name": "Ancient Dragon",
+      "spawnChance": 0.02,
+      "loot": ["dragon_scales", "manastone", "fbss"],
+      "respawnTicks": 10800
+    },
+    "resources": ["dragon_scales", "velium_ore"]
+  },
+  {
+    "id": "great_divide",
+    "name": "Great Divide",
+    "description": "A vast frozen tundra in Velious, home to coldain dwarves and the hostile kromzek giants of Kael Drakkel.",
+    "expansion": "scars_of_velious",
+    "levelRange": { "min": 40, "max": 55 },
+    "factionRequired": null,
+    "monsters": ["coldain_miner", "frost_giant", "kael_giant"],
+    "boss": {
+      "id": "kael_giant",
+      "name": "Kael Giant Warchief",
+      "spawnChance": 0.03,
+      "loot": ["giant_warrior_helm", "velium_ore"],
+      "respawnTicks": 3600
+    },
+    "resources": ["velium_ore", "wolf_fur"]
+  },
+  {
+    "id": "kael_drakkel",
+    "name": "Kael Drakkel",
+    "description": "The great city of the Storm Giants in Velious. Mortals who enter without ally status are killed on sight.",
+    "expansion": "scars_of_velious",
+    "levelRange": { "min": 50, "max": 60 },
+    "factionRequired": "kromrif",
+    "monsters": ["kael_giant", "frost_giant"],
+    "boss": {
+      "id": "kael_giant",
+      "name": "King Tormax",
+      "spawnChance": 0.01,
+      "loot": ["giant_warrior_helm", "velium_ore", "fbss"],
+      "respawnTicks": 14400
+    },
+    "resources": ["velium_ore"]
+  },
+  {
+    "id": "sleepers_tomb",
+    "name": "Sleeper's Tomb",
+    "description": "An ancient vault on Velious containing the imprisoned dragon Kerafyrm. Four mighty warders guard his slumber.",
+    "expansion": "scars_of_velious",
+    "levelRange": { "min": 58, "max": 60 },
+    "factionRequired": null,
+    "monsters": ["guardian_of_the_tomb", "primal_velium_warrior", "kerafyrm"],
+    "boss": {
+      "id": "kerafyrm",
+      "name": "Kerafyrm the Sleeper",
+      "spawnChance": 0.01,
+      "loot": ["dragon_scales", "manastone", "fbss", "fungi_tunic"],
+      "respawnTicks": 0
+    },
+    "resources": ["dragon_scales", "velium_ore"]
+  },
+  {
+    "id": "crystal_caverns",
+    "name": "Crystal Caverns",
+    "description": "A beautiful but deadly series of caverns in Velious, carved from pure crystal. Home to coldain dwarves and velium-infused creatures.",
+    "expansion": "scars_of_velious",
+    "levelRange": { "min": 35, "max": 50 },
+    "factionRequired": null,
+    "monsters": ["coldain_miner", "frost_giant", "primal_velium_warrior"],
+    "boss": {
+      "id": "primal_velium_warrior",
+      "name": "Crystal Guardian",
+      "spawnChance": 0.03,
+      "loot": ["velium_ore", "dragon_scales"],
+      "respawnTicks": 3600
+    },
+    "resources": ["velium_ore", "magma_shard"]
+  }
+]

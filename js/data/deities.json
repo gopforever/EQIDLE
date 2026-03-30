@@ -1,0 +1,107 @@
+[
+  {
+    "id": "agnostic",
+    "name": "Agnostic",
+    "alignment": "neutral",
+    "allowedClasses": ["warrior","paladin","shadowknight","ranger","bard","rogue","monk","beastlord","berserker","cleric","druid","shaman","wizard","magician","enchanter","necromancer"],
+    "boon": "No deity bonus or penalty. Accepted by all factions."
+  },
+  {
+    "id": "bertoxxulous",
+    "name": "Bertoxxulous",
+    "alignment": "evil",
+    "allowedClasses": ["shadowknight","necromancer","shaman"],
+    "boon": "Disease spells deal 15% more damage. Undead minions are 10% stronger."
+  },
+  {
+    "id": "brell_serilis",
+    "name": "Brell Serilis",
+    "alignment": "neutral",
+    "allowedClasses": ["warrior","paladin","ranger","rogue","cleric","druid","shaman","magician"],
+    "boon": "Smithing and mining skill caps increased by 10. Earth elemental pets are 10% stronger."
+  },
+  {
+    "id": "bristlebane",
+    "name": "Bristlebane",
+    "alignment": "neutral",
+    "allowedClasses": ["bard","rogue","wizard","enchanter"],
+    "boon": "Random bonus effects trigger 10% more often. Gold reward from quests increased by 15%."
+  },
+  {
+    "id": "cazic_thule",
+    "name": "Cazic-Thule",
+    "alignment": "evil",
+    "allowedClasses": ["shadowknight","necromancer","shaman","beastlord"],
+    "boon": "Fear spells last 25% longer. Lizard and troll races gain +10 to all stats."
+  },
+  {
+    "id": "erollisi_marr",
+    "name": "Erollisi Marr",
+    "alignment": "good",
+    "allowedClasses": ["paladin","ranger","bard","cleric","druid","shaman"],
+    "boon": "Healing spells restore 10% more HP. Group buff durations increased by 15%."
+  },
+  {
+    "id": "innoruuk",
+    "name": "Innoruuk",
+    "alignment": "evil",
+    "allowedClasses": ["shadowknight","necromancer","enchanter","bard"],
+    "boon": "Charm and fear spells are 20% more effective. Dark elf race gains +15 INT and CHA."
+  },
+  {
+    "id": "karana",
+    "name": "Karana",
+    "alignment": "good",
+    "allowedClasses": ["warrior","ranger","bard","druid","shaman"],
+    "boon": "Outdoor zones grant 10% bonus XP. Ranged attacks deal 5% more damage."
+  },
+  {
+    "id": "mithaniel_marr",
+    "name": "Mithaniel Marr",
+    "alignment": "good",
+    "allowedClasses": ["warrior","paladin","ranger","bard","cleric"],
+    "boon": "Combat abilities deal 10% more damage. Human and half-elf races gain +10 STR and STA."
+  },
+  {
+    "id": "prexus",
+    "name": "Prexus",
+    "alignment": "neutral",
+    "allowedClasses": ["warrior","monk","cleric","druid","shaman","magician"],
+    "boon": "Swimming skill at cap from start. Water-based spells deal 10% more damage."
+  },
+  {
+    "id": "quellious",
+    "name": "Quellious",
+    "alignment": "good",
+    "allowedClasses": ["monk","cleric","druid","wizard","enchanter"],
+    "boon": "Meditation skill cap increased by 25. Mana regeneration is 10% faster."
+  },
+  {
+    "id": "rallos_zek",
+    "name": "Rallos Zek",
+    "alignment": "evil",
+    "allowedClasses": ["warrior","shadowknight","ranger","bard","rogue","berserker"],
+    "boon": "Melee damage increased by 8%. Ogre and troll races gain +15 STR."
+  },
+  {
+    "id": "rodcet_nife",
+    "name": "Rodcet Nife",
+    "alignment": "good",
+    "allowedClasses": ["paladin","cleric","druid","shaman"],
+    "boon": "HP regeneration is 15% faster. Disease and poison resist increased by 20."
+  },
+  {
+    "id": "solusek_ro",
+    "name": "Solusek Ro",
+    "alignment": "neutral",
+    "allowedClasses": ["wizard","magician","bard","shadowknight"],
+    "boon": "Fire spells deal 15% more damage. Spell critical hit chance increased by 5%."
+  },
+  {
+    "id": "tunare",
+    "name": "Tunare",
+    "alignment": "good",
+    "allowedClasses": ["ranger","bard","druid","enchanter"],
+    "boon": "Foraging yields double results. Wood elf and high elf races gain +15 WIS and INT."
+  }
+]

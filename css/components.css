@@ -1,0 +1,649 @@
+/* === Components === */
+
+/* --- Progress Bars --- */
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 6px;
+  overflow: hidden;
+  flex: 1;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+
+.hp-fill     { background: var(--hp); }
+.mana-fill   { background: var(--mana); }
+.end-fill    { background: var(--endurance); }
+.xp-fill     { background: var(--xp); }
+.cast-fill   { background: var(--cast); }
+
+/* --- Stat Bar Row --- */
+.stat-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  width: 36px;
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.stat-value {
+  width: 70px;
+  text-align: right;
+  font-size: 11px;
+  color: var(--text);
+  flex-shrink: 0;
+}
+
+/* --- Buttons --- */
+.btn {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  transition: all 0.15s;
+}
+
+.btn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn.active {
+  background: var(--gold-dark, #8c6c22);
+  border-color: var(--gold);
+  color: #fff;
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold-dark, #8c6c22), var(--gold));
+  border-color: var(--gold);
+  color: #000;
+  font-weight: 500;
+}
+
+.btn-gold:hover {
+  opacity: 0.9;
+  color: #000;
+}
+
+/* --- Sidebar Nav Items --- */
+.sidebar-nav-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  background: transparent;
+  border: none;
+  border-left: 3px solid transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 13px;
+  text-align: left;
+  width: 100%;
+  transition: all 0.15s;
+  font-family: 'Roboto', sans-serif;
+}
+
+.sidebar-nav-item:hover {
+  background: rgba(255,255,255,0.05);
+  color: var(--text);
+  border-left-color: var(--border);
+}
+
+.sidebar-nav-item.active {
+  background: rgba(201,168,76,0.1);
+  color: var(--gold);
+  border-left-color: var(--gold);
+}
+
+/* --- Skill Grid --- */
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.skill-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.skill-card:hover {
+  border-color: var(--gold);
+}
+
+.skill-card.active {
+  border-color: var(--gold);
+  background: rgba(201,168,76,0.08);
+}
+
+.skill-name {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: var(--text);
+}
+
+.skill-value {
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+/* --- Toast Notifications --- */
+#notifications-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.toast {
+  padding: 12px 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  min-width: 200px;
+  max-width: 320px;
+  pointer-events: auto;
+  transform: translateX(120%);
+  opacity: 0;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  border-left: 4px solid var(--gold);
+  background: var(--panel);
+  color: var(--text);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+}
+
+.toast.toast-visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.toast.toast-hiding {
+  transform: translateX(120%);
+  opacity: 0;
+}
+
+.toast-info     { border-left-color: var(--mana); }
+.toast-success  { border-left-color: var(--endurance); }
+.toast-loot     { border-left-color: var(--gold); }
+.toast-levelup  { border-left-color: var(--xp); background: rgba(142,68,173,0.15); }
+.toast-death    { border-left-color: var(--hp); background: rgba(192,57,43,0.15); }
+
+/* --- Combat Layout --- */
+.combat-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  height: calc(100% - 32px);
+}
+
+@media (max-width: 900px) {
+  .combat-layout {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+}
+
+.combat-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* --- Enemy Card --- */
+.enemy-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.enemy-name {
+  font-family: 'Cinzel', serif;
+  color: var(--gold);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.enemy-level {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.no-enemy {
+  color: var(--muted);
+  text-align: center;
+  padding: 32px 16px;
+  font-style: italic;
+}
+
+/* --- Loot Log --- */
+.loot-log-title {
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.loot-list {
+  list-style: none;
+  max-height: 200px;
+  overflow-y: auto;
+  font-size: 12px;
+}
+
+.loot-list li {
+  padding: 3px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  color: var(--text);
+}
+
+/* --- Zone Select --- */
+#zone-select {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+#zone-select label {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+#zone-dropdown {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  flex: 1;
+  min-width: 160px;
+}
+
+/* --- Spell Bar --- */
+#spell-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.spell-btn {
+  font-size: 11px;
+  padding: 6px 10px;
+  line-height: 1.3;
+  min-width: 80px;
+}
+
+.no-spells {
+  color: var(--muted);
+  font-style: italic;
+  font-size: 12px;
+}
+
+/* --- Cast Bar --- */
+.cast-bar {
+  width: 100%;
+}
+
+.cast-label {
+  font-size: 11px;
+  color: var(--cast);
+  display: block;
+  text-align: center;
+  margin-top: 4px;
+}
+
+/* --- Chat Feed --- */
+.chat-feed {
+  overflow-y: auto;
+  max-height: 200px;
+  font-size: 12px;
+  background: rgba(0,0,0,0.2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 8px;
+  color: var(--text);
+}
+
+.chat-feed div {
+  padding: 2px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+/* --- Ghost / Who Online --- */
+.ghost-list {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.ghost-list th {
+  text-align: left;
+  padding: 6px 8px;
+  color: var(--gold);
+  border-bottom: 1px solid var(--border);
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+}
+
+.ghost-list td {
+  padding: 5px 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.ghost-list tr:hover td {
+  background: rgba(255,255,255,0.03);
+}
+
+/* --- Auction Table --- */
+.auction-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.auction-table th {
+  text-align: left;
+  padding: 6px 8px;
+  color: var(--gold);
+  border-bottom: 1px solid var(--border);
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+}
+
+.auction-table td {
+  padding: 5px 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.auction-table .buy-btn {
+  font-size: 11px;
+  padding: 3px 8px;
+}
+
+/* --- Raid Roster --- */
+.raid-roster {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 8px;
+}
+
+.raid-group {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.raid-group-title {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+.raid-member {
+  font-size: 11px;
+  padding: 2px 0;
+  color: var(--text);
+}
+
+/* === MONSTER SPRITE SYSTEM === */
+.monster-sprite {
+  display: inline-block;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  background-repeat: no-repeat;
+}
+
+/* --- gnolls.png (1 row x 3 cols) --- */
+.monster-gnoll_pup,
+.monster-gnoll_guard,
+.monster-fippy_darkpaw {
+  width: 120px; height: 120px;
+  background-image: url('../assets/monsters/gnolls.png');
+  background-size: 360px 120px;
+}
+.monster-gnoll_pup     { background-position: 0px 0px; }
+.monster-gnoll_guard   { background-position: -120px 0px; }
+.monster-fippy_darkpaw { background-position: -240px 0px; }
+
+/* --- crushbone_orcs.png (3 rows x 3 cols) --- */
+.monster-orc_pawn,
+.monster-orc_legionnaire,
+.monster-orc_warlord,
+.monster-orc_centurion,
+.monster-orc_centurion_elite,
+.monster-orc_legionmaster,
+.monster-emperor_crushbone_w,
+.monster-emperor_crushbone_m,
+.monster-emperor_crushbone {
+  width: 120px; height: 120px;
+  background-image: url('../assets/monsters/crushbone_orcs.png');
+  background-size: 360px 360px;
+}
+.monster-orc_pawn             { background-position: 0px 0px; }
+.monster-orc_legionnaire      { background-position: -120px 0px; }
+.monster-orc_warlord          { background-position: -240px 0px; }
+.monster-orc_centurion        { background-position: 0px -120px; }
+.monster-orc_centurion_elite  { background-position: -120px -120px; }
+.monster-orc_legionmaster     { background-position: -240px -120px; }
+.monster-emperor_crushbone_w  { background-position: 0px -240px; }
+.monster-emperor_crushbone_m  { background-position: -120px -240px; }
+.monster-emperor_crushbone    { background-position: -240px -240px; }
+
+/* --- befallen_undead.png (3 rows x 3 cols, col=type, row=tier) --- */
+.monster-decaying_skeleton,
+.monster-rotting_skeleton,
+.monster-ancient_skeleton,
+.monster-skeleton,
+.monster-skeleton_warrior,
+.monster-skeleton_knight,
+.monster-verix_kylox_w,
+.monster-verix_kylox_m,
+.monster-verix_kylox {
+  width: 120px; height: 120px;
+  background-image: url('../assets/monsters/befallen_undead.png');
+  background-size: 360px 360px;
+}
+.monster-decaying_skeleton { background-position: 0px 0px; }
+.monster-rotting_skeleton  { background-position: 0px -120px; }
+.monster-ancient_skeleton  { background-position: 0px -240px; }
+.monster-skeleton          { background-position: -120px 0px; }
+.monster-skeleton_warrior  { background-position: -120px -120px; }
+.monster-skeleton_knight   { background-position: -120px -240px; }
+.monster-verix_kylox_w     { background-position: -240px 0px; }
+.monster-verix_kylox_m     { background-position: -240px -120px; }
+.monster-verix_kylox       { background-position: -240px -240px; }
+
+/* --- multi_zone_sheet.png (4 rows x 3 cols) --- */
+.monster-hatchling,
+.monster-wyrmling,
+.monster-lord_nagafen,
+.monster-ghoul,
+.monster-revenant,
+.monster-maestro_of_rancor,
+.monster-spider,
+.monster-giant_spider,
+.monster-mistress_of_scorn,
+.monster-iksar_brigand,
+.monster-iksar_warrior,
+.monster-venril_sathir {
+  width: 120px; height: 120px;
+  background-image: url('../assets/monsters/multi_zone_sheet.png');
+  background-size: 360px 480px;
+}
+.monster-hatchling         { background-position: 0px 0px; }
+.monster-wyrmling          { background-position: -120px 0px; }
+.monster-lord_nagafen      { background-position: -240px 0px; }
+.monster-ghoul             { background-position: 0px -120px; }
+.monster-revenant          { background-position: -120px -120px; }
+.monster-maestro_of_rancor { background-position: -240px -120px; }
+.monster-spider            { background-position: 0px -240px; }
+.monster-giant_spider      { background-position: -120px -240px; }
+.monster-mistress_of_scorn { background-position: -240px -240px; }
+.monster-iksar_brigand     { background-position: 0px -360px; }
+.monster-iksar_warrior     { background-position: -120px -360px; }
+.monster-venril_sathir     { background-position: -240px -360px; }
+
+/* --- Placeholder for monsters without sprites --- */
+.monster-placeholder {
+  width: 120px;
+  height: 120px;
+  background: rgba(255,255,255,0.05);
+  border: 2px dashed var(--border);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+}
+
+/* --- Boss monsters display larger --- */
+.monster-lord_nagafen,
+.monster-emperor_crushbone,
+.monster-fippy_darkpaw,
+.monster-verix_kylox,
+.monster-maestro_of_rancor,
+.monster-mistress_of_scorn,
+.monster-venril_sathir {
+  width: 160px;
+  height: 160px;
+}
+
+/* --- Adjust boss background sizes for enlarged display --- */
+.monster-fippy_darkpaw {
+  background-size: 480px 160px;
+  background-position: -320px 0px;
+}
+.monster-emperor_crushbone {
+  background-size: 480px 480px;
+  background-position: -320px -320px;
+}
+.monster-verix_kylox {
+  background-size: 480px 480px;
+  background-position: -320px -320px;
+}
+.monster-lord_nagafen {
+  background-size: 480px 640px;
+  background-position: -320px 0px;
+}
+.monster-maestro_of_rancor {
+  background-size: 480px 640px;
+  background-position: -320px -160px;
+}
+.monster-mistress_of_scorn {
+  background-size: 480px 640px;
+  background-position: -320px -320px;
+}
+.monster-venril_sathir {
+  background-size: 480px 640px;
+  background-position: -320px -480px;
+}
+
+/* --- Misc UI --- */
+.muted {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.section-header {
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  color: var(--gold);
+  margin: 16px 0 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+}
+
+.faction-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  font-size: 13px;
+}
+
+.faction-standing-ally        { color: #27ae60; }
+.faction-standing-warmly      { color: #2ecc71; }
+.faction-standing-kindly      { color: #1abc9c; }
+.faction-standing-amiably     { color: #3498db; }
+.faction-standing-indifferent { color: var(--muted); }
+.faction-standing-apprehensively { color: #e67e22; }
+.faction-standing-dubiously   { color: #e74c3c; }
+.faction-standing-threateningly { color: #c0392b; }
+.faction-standing-kos         { color: #ff0000; font-weight: bold; }
+
+.inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 8px;
+}
+
+.inventory-item {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.inventory-item:hover {
+  border-color: var(--gold);
+}
+
+.inventory-item-name {
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.inventory-item-type {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.inventory-item-qty {
+  color: var(--gold);
+  font-size: 11px;
+}
