@@ -1,5 +1,14 @@
 import { eventBus } from '../engine/EventBus.js';
 
+const CON_LABELS = {
+  grey:   '⬜ Grey',
+  green:  '🟢 Green',
+  blue:   '🔵 Blue',
+  white:  '⚪ White',
+  yellow: '🟡 Yellow',
+  red:    '🔴 Red'
+};
+
 export class CombatPanel {
   constructor(gameState, data, systems) {
     this.gameState = gameState;
@@ -10,6 +19,7 @@ export class CombatPanel {
     this.zonesSystem = systems.zones;
     this._autoAttacking = false;
     this._autoAttackInterval = null;
+    this._combatLog = [];
     this._bindEvents();
   }
 
@@ -21,6 +31,41 @@ export class CombatPanel {
     eventBus.on('loot', () => this.renderLootLog());
     eventBus.on('xp_gained', () => this.renderPlayerStats());
     eventBus.on('levelup', () => this.renderPlayerStats());
+    eventBus.on('combat_hit', (data) => this._onCombatHit(data));
+  }
+
+  _onCombatHit(data) {
+    const { source, target, damage, type } = data;
+    let entry;
+    if (source === 'player') {
+      switch (type) {
+        case 'miss':     entry = { text: `You miss ${target}!`,                       css: 'hit-miss' };    break;
+        case 'critical': entry = { text: `You hit ${target} for ${damage} **(Critical!)**`, css: 'hit-critical' }; break;
+        case 'glancing': entry = { text: `You hit ${target} for ${damage} (glancing)`, css: 'hit-glancing' }; break;
+        default:         entry = { text: `You hit ${target} for ${damage}.`,           css: 'hit-normal' };  break;
+      }
+    } else if (target === 'player') {
+      switch (type) {
+        case 'miss':   entry = { text: `${source} misses you!`,              css: 'hit-miss' };  break;
+        case 'dodge':  entry = { text: `You dodge ${source}'s attack!`,      css: 'hit-dodge' }; break;
+        case 'parry':  entry = { text: `You parry ${source}'s attack!`,      css: 'hit-parry' }; break;
+        default:       entry = { text: `${source} hits you for ${damage}.`,  css: 'hit-normal' }; break;
+      }
+    } else {
+      // spell / lifetap hits
+      entry = { text: `${source} hits ${target} for ${damage}.`, css: 'hit-normal' };
+    }
+    this._combatLog.unshift(entry);
+    if (this._combatLog.length > 20) this._combatLog.pop();
+    this._renderCombatLog();
+  }
+
+  _renderCombatLog() {
+    const el = document.getElementById('combat-log');
+    if (!el) return;
+    el.innerHTML = this._combatLog
+      .map(e => `<div class="combat-log-entry ${e.css}">${e.text}</div>`)
+      .join('');
   }
 
   render() {
@@ -96,11 +141,13 @@ export class CombatPanel {
     if (!enemyEl) return;
     const combat = this.gameState.combat;
     const hpPct = Math.max(0, Math.min(100, (combat.enemyHp / monster.hp) * 100));
+    const conColor = combat.conColor || 'white';
+    const conLabel = CON_LABELS[conColor] || conColor;
     enemyEl.innerHTML = `
       <div class="enemy-card">
         <div class="monster-sprite ${monster.spriteClass}"></div>
         <div class="enemy-name">${monster.name}</div>
-        <div class="enemy-level">Level ${monster.level}</div>
+        <div class="enemy-level">Level ${monster.level} <span class="con-label con-${conColor}">${conLabel}</span></div>
         <div class="stat-bar">
           <div class="progress-bar">
             <div class="progress-fill hp-fill" style="width: ${hpPct}%"></div>
@@ -113,6 +160,7 @@ export class CombatPanel {
             </div>
             <span class="cast-label">Casting...</span>
           </div>` : ''}
+        <div id="combat-log" class="combat-log"></div>
       </div>
     `;
   }
@@ -123,11 +171,14 @@ export class CombatPanel {
     if (!enemyEl) return;
     if (!combat.active || !combat.enemyId) {
       enemyEl.innerHTML = `<div class="no-enemy">No target selected.<br>Select a zone and attack!</div>`;
+      this._combatLog = [];
       return;
     }
     const monster = this.monsters.find(m => m.id === combat.enemyId);
     if (!monster) return;
     this.renderEnemy(monster);
+    // Re-populate combat log after re-rendering the enemy card (which contains the log div)
+    this._renderCombatLog();
     // Attack toggle button
     const btn = document.getElementById('attack-toggle');
     if (btn) {
