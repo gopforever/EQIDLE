@@ -3,23 +3,27 @@
     "id": "wolf_pup",
     "name": "Wolf Pup",
     "zone": "qeynos_hills",
-    "level": 1,
-    "hp": 20,
-    "minDamage": 1,
-    "maxDamage": 3,
-    "xpReward": 10,
+    "level": 2,
+    "hp": 35,
+    "minDamage": 2,
+    "maxDamage": 6,
+    "xpReward": 14,
     "goldReward": 0,
     "lootTable": [
       {
         "itemId": "wolf_pelt",
-        "dropChance": 0.5
+        "dropChance": 0.4
+      },
+      {
+        "itemId": "wolf_meat",
+        "dropChance": 0.3
       }
     ],
     "faction": "animals_qeynos",
     "isUndead": false,
     "isSocial": true,
     "isAnimal": true,
-    "spriteClass": "monster-placeholder"
+    "spriteClass": "monster-wolf_pup"
   },
   {
     "id": "plains_wolf",
@@ -3336,5 +3340,359 @@
     "isUndead": false,
     "isSocial": false,
     "isAnimal": false
+  },
+  {
+    "id": "terror",
+    "name": "Terror",
+    "zone": "plane_of_fear",
+    "level": 45,
+    "hp": 10000,
+    "minDamage": 100,
+    "maxDamage": 260,
+    "xpReward": 3500,
+    "goldReward": 60,
+    "spriteClass": "monster-terror",
+    "lootTable": [
+      {
+        "itemId": "fear_shard",
+        "dropChance": 0.3
+      },
+      {
+        "itemId": "terror_hide",
+        "dropChance": 0.25
+      }
+    ],
+    "faction": "cazic_thule_servants",
+    "isUndead": false,
+    "isSocial": false,
+    "isAnimal": false
+  },
+  {
+    "id": "dread",
+    "name": "Dread",
+    "zone": "plane_of_fear",
+    "level": 48,
+    "hp": 13000,
+    "minDamage": 130,
+    "maxDamage": 340,
+    "xpReward": 4500,
+    "goldReward": 75,
+    "spriteClass": "monster-dread",
+    "lootTable": [
+      {
+        "itemId": "fear_shard",
+        "dropChance": 0.35
+      },
+      {
+        "itemId": "dread_essence",
+        "dropChance": 0.15
+      }
+    ],
+    "faction": "cazic_thule_servants",
+    "isUndead": false,
+    "isSocial": false,
+    "isAnimal": false
+  },
+  {
+    "id": "cazic_thule",
+    "name": "Cazic-Thule, The Faceless",
+    "zone": "plane_of_fear",
+    "level": 75,
+    "hp": 600000,
+    "minDamage": 900,
+    "maxDamage": 2200,
+    "xpReward": 120000,
+    "goldReward": 3000,
+    "spriteClass": "monster-cazic_thule",
+    "lootTable": [
+      {
+        "itemId": "cazic_thule_idol",
+        "dropChance": 0.2
+      },
+      {
+        "itemId": "faceless_shroud",
+        "dropChance": 0.1
+      },
+      {
+        "itemId": "staff_of_the_faceless",
+        "dropChance": 0.06
+      }
+    ],
+    "faction": "cazic_thule_servants",
+    "isUndead": false,
+    "isSocial": false,
+    "isAnimal": false,
+    "isRaidBoss": true,
+    "raidSize": 36
+  },
+  {
+    "id": "hill_snake",
+    "name": "Hill Snake",
+    "zone": "qeynos_hills",
+    "level": 1,
+    "hp": 20,
+    "minDamage": 1,
+    "maxDamage": 4,
+    "xpReward": 8,
+    "goldReward": 0,
+    "spriteClass": "monster-hill_snake",
+    "lootTable": [
+      {
+        "itemId": "snake_scales",
+        "dropChance": 0.5
+      },
+      {
+        "itemId": "snake_egg",
+        "dropChance": 0.1
+      }
+    ],
+    "faction": "none",
+    "isUndead": false,
+    "isSocial": false,
+    "isAnimal": true
+  },
+  {
+    "id": "bandit",
+    "name": "Bandit",
+    "zone": "qeynos_hills",
+    "level": 3,
+    "hp": 55,
+    "minDamage": 3,
+    "maxDamage": 9,
+    "xpReward": 22,
+    "goldReward": 3,
+    "spriteClass": "monster-bandit",
+    "lootTable": [
+      {
+        "itemId": "rusty_sword",
+        "dropChance": 0.3
+      },
+      {
+        "itemId": "leather_armor",
+        "dropChance": 0.2
+      },
+      {
+        "itemId": "copper_coin",
+        "dropChance": 0.6
+      }
+    ],
+    "faction": "corrupt_qeynos_guards",
+    "isUndead": false,
+    "isSocial": true,
+    "isAnimal": false
+  },
+  {
+    "id": "primal_velium_warrior",
+    "name": "Primal Velium Warrior",
+    "zone": "sleepers_tomb",
+    "level": 55,
+    "hp": 22000,
+    "minDamage": 200,
+    "maxDamage": 500,
+    "xpReward": 7000,
+    "goldReward": 100,
+    "spriteClass": "monster-primal_velium_warrior",
+    "lootTable": [
+      {
+        "itemId": "velium_shard",
+        "dropChance": 0.4
+      },
+      {
+        "itemId": "primal_essence",
+        "dropChance": 0.15
+      }
+    ],
+    "faction": "claws_of_veeshan",
+    "isUndead": false,
+    "isSocial": true,
+    "isAnimal": false
+  },
+  {
+    "id": "guardian_of_tomb",
+    "name": "Guardian of the Tomb",
+    "zone": "sleepers_tomb",
+    "level": 60,
+    "hp": 45000,
+    "minDamage": 300,
+    "maxDamage": 750,
+    "xpReward": 12000,
+    "goldReward": 200,
+    "spriteClass": "monster-guardian_of_tomb",
+    "lootTable": [
+      {
+        "itemId": "guardian_seal",
+        "dropChance": 0.2
+      },
+      {
+        "itemId": "ancient_velium_ore",
+        "dropChance": 0.3
+      }
+    ],
+    "faction": "claws_of_veeshan",
+    "isUndead": false,
+    "isSocial": false,
+    "isAnimal": false
+  },
+  {
+    "id": "zlandicar",
+    "name": "Zlandicar",
+    "zone": "sleepers_tomb",
+    "level": 65,
+    "hp": 280000,
+    "minDamage": 500,
+    "maxDamage": 1200,
+    "xpReward": 65000,
+    "goldReward": 1200,
+    "spriteClass": "monster-zlandicar",
+    "lootTable": [
+      {
+        "itemId": "zlandicars_talisman",
+        "dropChance": 0.12
+      },
+      {
+        "itemId": "heart_of_zlandicar",
+        "dropChance": 0.25
+      },
+      {
+        "itemId": "ancient_dragon_scale",
+        "dropChance": 0.2
+      }
+    ],
+    "faction": "claws_of_veeshan",
+    "isUndead": false,
+    "isSocial": false,
+    "isAnimal": false,
+    "isRaidBoss": true,
+    "raidSize": 54
+  },
+  {
+    "id": "unrest_ghoul",
+    "name": "Ghoul",
+    "zone": "unrest",
+    "level": 18,
+    "hp": 900,
+    "minDamage": 18,
+    "maxDamage": 48,
+    "xpReward": 280,
+    "goldReward": 8,
+    "spriteClass": "monster-unrest_ghoul",
+    "lootTable": [
+      {
+        "itemId": "bone_chips",
+        "dropChance": 0.5
+      },
+      {
+        "itemId": "ghoul_skin",
+        "dropChance": 0.25
+      }
+    ],
+    "faction": "bloodsabers",
+    "isUndead": true,
+    "isSocial": true,
+    "isAnimal": false
+  },
+  {
+    "id": "spectre",
+    "name": "Spectre",
+    "zone": "unrest",
+    "level": 24,
+    "hp": 1600,
+    "minDamage": 28,
+    "maxDamage": 72,
+    "xpReward": 520,
+    "goldReward": 14,
+    "spriteClass": "monster-spectre",
+    "lootTable": [
+      {
+        "itemId": "spectre_shroud",
+        "dropChance": 0.15
+      },
+      {
+        "itemId": "ectoplasm",
+        "dropChance": 0.4
+      }
+    ],
+    "faction": "bloodsabers",
+    "isUndead": true,
+    "isSocial": false,
+    "isAnimal": false
+  },
+  {
+    "id": "garanel_rucksif",
+    "name": "Garanel Rucksif",
+    "zone": "unrest",
+    "level": 30,
+    "hp": 8000,
+    "minDamage": 60,
+    "maxDamage": 160,
+    "xpReward": 2500,
+    "goldReward": 40,
+    "spriteClass": "monster-garanel_rucksif",
+    "lootTable": [
+      {
+        "itemId": "rucksifs_black_sword",
+        "dropChance": 0.1
+      },
+      {
+        "itemId": "estate_key",
+        "dropChance": 0.5
+      },
+      {
+        "itemId": "ring_of_the_dead",
+        "dropChance": 0.08
+      }
+    ],
+    "faction": "bloodsabers",
+    "isUndead": true,
+    "isSocial": false,
+    "isAnimal": false,
+    "isRaidBoss": false
+  },
+  {
+    "id": "kerafyrm",
+    "name": "Kerafyrm, The Sleeper",
+    "zone": "sleepers_tomb",
+    "level": 85,
+    "hp": 2000000,
+    "minDamage": 1500,
+    "maxDamage": 4000,
+    "xpReward": 500000,
+    "goldReward": 10000,
+    "spriteClass": "monster-kerafyrm_awakening",
+    "phaseSprites": [
+      {
+        "hpThreshold": 0.66,
+        "spriteClass": "monster-kerafyrm_enraged"
+      },
+      {
+        "hpThreshold": 0.33,
+        "spriteClass": "monster-kerafyrm"
+      }
+    ],
+    "lootTable": [
+      {
+        "itemId": "prismatic_scale_of_kerafyrm",
+        "dropChance": 0.5
+      },
+      {
+        "itemId": "sleepers_tomb_key",
+        "dropChance": 1.0
+      },
+      {
+        "itemId": "ancient_prismatic_cloak",
+        "dropChance": 0.15
+      },
+      {
+        "itemId": "kerafyrm_claw",
+        "dropChance": 0.3
+      }
+    ],
+    "faction": "claws_of_veeshan",
+    "isUndead": false,
+    "isSocial": false,
+    "isAnimal": false,
+    "isRaidBoss": true,
+    "raidSize": 72,
+    "phaseShift": true
   }
 ]
