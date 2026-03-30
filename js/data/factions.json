@@ -1,0 +1,137 @@
+[
+  {
+    "id": "freeport_militia",
+    "name": "Freeport Militia",
+    "description": "The brutal enforcement arm of the Council of Freeport. They maintain order in Freeport through fear and violence.",
+    "allies": ["merchants_of_qeynos"],
+    "enemies": ["corrupt_qeynos_guards", "bloodsabers"],
+    "startingValue": 0,
+    "thresholds": {"kos": -500, "dubious": -100, "apprehensive": 0, "indifferent": 100, "amiable": 500, "kindly": 750, "warmly": 900, "ally": 1100}
+  },
+  {
+    "id": "guards_of_qeynos",
+    "name": "Guards of Qeynos",
+    "description": "The honorable city guards protecting the innocent citizens of Qeynos from evil forces and criminal elements.",
+    "allies": ["priests_of_life", "merchants_of_qeynos"],
+    "enemies": ["bloodsabers", "corrupt_qeynos_guards", "crushbone_orcs"],
+    "startingValue": 0,
+    "thresholds": {"kos": -500, "dubious": -100, "apprehensive": 0, "indifferent": 100, "amiable": 500, "kindly": 750, "warmly": 900, "ally": 1100}
+  },
+  {
+    "id": "bloodsabers",
+    "name": "Bloodsabers",
+    "description": "A sinister cult of undead worshippers operating in the shadows of Qeynos. They seek to spread undeath throughout Norrath.",
+    "allies": ["corrupt_qeynos_guards"],
+    "enemies": ["guards_of_qeynos", "priests_of_life"],
+    "startingValue": -500,
+    "thresholds": {"kos": -500, "dubious": -100, "apprehensive": 0, "indifferent": 100, "amiable": 500, "kindly": 750, "warmly": 900, "ally": 1100}
+  },
+  {
+    "id": "corrupt_qeynos_guards",
+    "name": "Corrupt Qeynos Guards",
+    "description": "Dishonorable guards who have sold out their city to criminal elements. They work with the Bloodsabers for personal gain.",
+    "allies": ["bloodsabers"],
+    "enemies": ["guards_of_qeynos", "priests_of_life"],
+    "startingValue": -500,
+    "thresholds": {"kos": -500, "dubious": -100, "apprehensive": 0, "indifferent": 100, "amiable": 500, "kindly": 750, "warmly": 900, "ally": 1100}
+  },
+  {
+    "id": "crushbone_orcs",
+    "name": "Crushbone Orcs",
+    "description": "The brutal orcish empire led by Emperor Crushbone on Faydwer. They wage constant war against the elves of Kelethin.",
+    "allies": [],
+    "enemies": ["guards_of_qeynos", "priests_of_life"],
+    "startingValue": -500,
+    "thresholds": {"kos": -500, "dubious": -100, "apprehensive": 0, "indifferent": 100, "amiable": 500, "kindly": 750, "warmly": 900, "ally": 1100}
+  },
+  {
+    "id": "runnyeye_goblins",
+    "name": "Runnyeye Goblins",
+    "description": "The goblin inhabitants of the Runnyeye Citadel. Dangerous and unpredictable, they raid settlements throughout the Karanas.",
+    "allies": [],
+    "enemies": ["guards_of_qeynos", "merchants_of_qeynos"],
+    "startingValue": -500,
+    "thresholds": {"kos": -500, "dubious": -100, "apprehensive": 0, "indifferent": 100, "amiable": 500, "kindly": 750, "warmly": 900, "ally": 1100}
+  },
+  {
+    "id": "claws_of_veeshan",
+    "name": "Claws of Veeshan",
+    "description": "The council of ancient dragons in Velious who guard the secrets of the dragon goddess Veeshan. Gaining their trust is extraordinarily difficult.",
+    "allies": ["ring_of_scale"],
+    "enemies": ["coldain", "kromzek"],
+    "startingValue": -500,
+    "thresholds": {"kos": -500, "dubious": -100, "apprehensive": 0, "indifferent": 100, "amiable": 500, "kindly": 750, "warmly": 900, "ally": 1100}
+  },
+  {
+    "id": "coldain",
+    "name": "Coldain",
+    "description": "The hardy dwarf-like inhabitants of Velious who have survived harsh conditions for millennia. They wage endless war against the Kromzek giants.",
+    "allies": [],
+    "enemies": ["claws_of_veeshan", "kromzek", "kromrif"],
+    "startingValue": 0,
+    "thresholds": {"kos": -500, "dubious": -100, "apprehensive": 0, "indifferent": 100, "amiable": 500, "kindly": 750, "warmly": 900, "ally": 1100}
+  },
+  {
+    "id": "kromzek",
+    "name": "Kromzek",
+    "description": "The powerful Velious frost giant clan that rules Kael Drakkel. They despise the Coldain dwarves and seek to dominate Velious.",
+    "allies": ["kromrif"],
+    "enemies": ["coldain", "claws_of_veeshan"],
+    "startingValue": -500,
+    "thresholds": {"kos": -500, "dubious": -100, "apprehensive": 0, "indifferent": 100, "amiable": 500, "kindly": 750, "warmly": 900, "ally": 1100}
+  },
+  {
+    "id": "kromrif",
+    "name": "Kromrif",
+    "description": "The lesser frost giant clan allied with the Kromzek. They serve as foot soldiers in the ongoing war against the Coldain.",
+    "allies": ["kromzek"],
+    "enemies": ["coldain"],
+    "startingValue": -500,
+    "thresholds": {"kos": -500, "dubious": -100, "apprehensive": 0, "indifferent": 100, "amiable": 500, "kindly": 750, "warmly": 900, "ally": 1100}
+  },
+  {
+    "id": "priests_of_life",
+    "name": "Priests of Life",
+    "description": "The devoted clergy of the Church of Qeynos who serve the god Karana. They provide healing and spiritual guidance to the city's inhabitants.",
+    "allies": ["guards_of_qeynos"],
+    "enemies": ["bloodsabers", "corrupt_qeynos_guards"],
+    "startingValue": 100,
+    "thresholds": {"kos": -500, "dubious": -100, "apprehensive": 0, "indifferent": 100, "amiable": 500, "kindly": 750, "warmly": 900, "ally": 1100}
+  },
+  {
+    "id": "heretics",
+    "name": "Heretics",
+    "description": "Followers of Innoruuk, the Prince of Hate, who have established a stronghold in the Plane of Hate. They are fanatically devoted to spreading hatred.",
+    "allies": ["bloodsabers"],
+    "enemies": ["priests_of_life", "guards_of_qeynos"],
+    "startingValue": -500,
+    "thresholds": {"kos": -500, "dubious": -100, "apprehensive": 0, "indifferent": 100, "amiable": 500, "kindly": 750, "warmly": 900, "ally": 1100}
+  },
+  {
+    "id": "ring_of_scale",
+    "name": "Ring of Scale",
+    "description": "The militant dragon faction in Kunark that seeks to dominate and subjugate all other races. They command armies of sarnak and other minions.",
+    "allies": ["claws_of_veeshan"],
+    "enemies": ["coldain"],
+    "startingValue": -500,
+    "thresholds": {"kos": -500, "dubious": -100, "apprehensive": 0, "indifferent": 100, "amiable": 500, "kindly": 750, "warmly": 900, "ally": 1100}
+  },
+  {
+    "id": "merchants_of_qeynos",
+    "name": "Merchants of Qeynos",
+    "description": "The mercantile guild controlling commerce in and around Qeynos. They deal with all races and factions for profit.",
+    "allies": ["guards_of_qeynos", "freeport_militia"],
+    "enemies": ["runnyeye_goblins"],
+    "startingValue": 100,
+    "thresholds": {"kos": -500, "dubious": -100, "apprehensive": 0, "indifferent": 100, "amiable": 500, "kindly": 750, "warmly": 900, "ally": 1100}
+  },
+  {
+    "id": "kithicor_darkies",
+    "name": "Kithicor Undead",
+    "description": "The restless undead spirits haunting the Kithicor forest following an ancient battle. They are eternally hostile to all living creatures.",
+    "allies": [],
+    "enemies": ["guards_of_qeynos", "priests_of_life", "merchants_of_qeynos"],
+    "startingValue": -500,
+    "thresholds": {"kos": -500, "dubious": -100, "apprehensive": 0, "indifferent": 100, "amiable": 500, "kindly": 750, "warmly": 900, "ally": 1100}
+  }
+]
