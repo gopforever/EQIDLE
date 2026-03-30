@@ -76,21 +76,27 @@ async function main() {
   const saveManager = new SaveManager(gameState);
   const offlineMs = saveManager.getOfflineMs();
   const saved = saveManager.load();
+  const hasSave = !!saved;
 
   if (saved) {
     saveManager.applyLoad(saved, gameState);
   }
 
+  // If a save exists but name is missing, use a fallback and go straight into the game
+  if (hasSave && !gameState.player.name) {
+    gameState.player.name = 'Adventurer';
+  }
+
   // --- Show char creation if new game ---
   if (!gameState.player.name) {
-    showCharCreationModal(data);
+    showCharCreationModal(data, saveManager, offlineMs, hasSave);
     return; // wait for modal submission
   }
 
   startGame(data, saveManager, offlineMs);
 }
 
-function showCharCreationModal(data) {
+function showCharCreationModal(data, saveManager, offlineMs, hasSave) {
   const modal = document.getElementById('char-creation-modal');
   if (modal) modal.classList.remove('hidden');
 
@@ -105,24 +111,25 @@ function showCharCreationModal(data) {
     }
     gameState.player.name = name;
     gameState.player.class = cls;
-    // Apply class starting stats
-    const classDef = data.classes.find(c => c.id === cls);
-    if (classDef && classDef.startingStats) {
-      const s = classDef.startingStats;
-      gameState.player.maxHp = s.hp;
-      gameState.player.hp = s.hp;
-      gameState.player.maxMana = s.mana;
-      gameState.player.mana = s.mana;
-      gameState.player.maxEndurance = s.endurance;
-      gameState.player.endurance = s.endurance;
-      gameState.player.stats = {
-        str: s.str, sta: s.sta, agi: s.agi, dex: s.dex,
-        wis: s.wis, int: s.int, cha: s.cha
-      };
+    // Only apply starting stats for a genuinely new game (no existing save with progress)
+    if (!hasSave) {
+      const classDef = data.classes.find(c => c.id === cls);
+      if (classDef && classDef.startingStats) {
+        const s = classDef.startingStats;
+        gameState.player.maxHp = s.hp;
+        gameState.player.hp = s.hp;
+        gameState.player.maxMana = s.mana;
+        gameState.player.mana = s.mana;
+        gameState.player.maxEndurance = s.endurance;
+        gameState.player.endurance = s.endurance;
+        gameState.player.stats = {
+          str: s.str, sta: s.sta, agi: s.agi, dex: s.dex,
+          wis: s.wis, int: s.int, cha: s.cha
+        };
+      }
     }
     if (modal) modal.classList.add('hidden');
-    const saveManager = new SaveManager(gameState);
-    startGame(data, saveManager, 0);
+    startGame(data, saveManager, hasSave ? offlineMs : 0);
   });
 }
 
