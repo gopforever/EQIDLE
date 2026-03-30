@@ -478,6 +478,18 @@
 .monster-gnoll_guard   { background-position: -120px 0px; }
 .monster-fippy_darkpaw { background-position: -240px 0px; }
 
+/* --- qeynos_hills.png (1 row x 3 cols) --- */
+.monster-hill_snake,
+.monster-wolf_pup,
+.monster-bandit {
+  width: 120px; height: 120px;
+  background-image: url('../assets/monsters/qeynos_hills.png');
+  background-size: 360px 120px;
+}
+.monster-hill_snake { background-position: 0px 0px; }
+.monster-wolf_pup   { background-position: -120px 0px; }
+.monster-bandit     { background-position: -240px 0px; }
+
 /* --- crushbone_orcs.png (3 rows x 3 cols) --- */
 .monster-orc_pawn,
 .monster-orc_legionnaire,

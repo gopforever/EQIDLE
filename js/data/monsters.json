@@ -1040,7 +1040,7 @@
     "maxDamage": 4,
     "xpReward": 8,
     "goldReward": 0,
-    "spriteClass": "monster-placeholder",
+    "spriteClass": "monster-hill_snake",
     "lootTable": [
       {
         "itemId": "snake_scales",
@@ -1062,7 +1062,7 @@
     "maxDamage": 5,
     "xpReward": 12,
     "goldReward": 0,
-    "spriteClass": "monster-placeholder",
+    "spriteClass": "monster-wolf_pup",
     "lootTable": [
       {
         "itemId": "wolf_fur",
@@ -1084,7 +1084,7 @@
     "maxDamage": 7,
     "xpReward": 20,
     "goldReward": 3,
-    "spriteClass": "monster-placeholder",
+    "spriteClass": "monster-bandit",
     "lootTable": [
       {
         "itemId": "rusty_dagger",
