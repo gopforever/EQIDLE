@@ -1,0 +1,962 @@
+[
+  {
+    "id": "smithing",
+    "name": "Smithing",
+    "description": "The art of forging metal into weapons and armor.",
+    "recipes": [
+      {
+        "id": "smith_bronze_dagger",
+        "name": "Bronze Dagger",
+        "trivial": 18,
+        "components": [
+          { "itemId": "bronze_ingot", "quantity": 1 },
+          { "itemId": "metal_bits", "quantity": 2 }
+        ],
+        "result": "bronze_dagger",
+        "quantity": 1
+      },
+      {
+        "id": "smith_bronze_sword",
+        "name": "Bronze Long Sword",
+        "trivial": 30,
+        "components": [
+          { "itemId": "bronze_ingot", "quantity": 2 },
+          { "itemId": "metal_bits", "quantity": 3 }
+        ],
+        "result": "bronze_sword",
+        "quantity": 1
+      },
+      {
+        "id": "smith_bronze_axe",
+        "name": "Bronze Axe",
+        "trivial": 25,
+        "components": [
+          { "itemId": "bronze_ingot", "quantity": 2 },
+          { "itemId": "metal_bits", "quantity": 2 }
+        ],
+        "result": "bronze_axe",
+        "quantity": 1
+      },
+      {
+        "id": "smith_banded_helm",
+        "name": "Banded Helm",
+        "trivial": 60,
+        "components": [
+          { "itemId": "iron_ingot", "quantity": 2 },
+          { "itemId": "metal_bits", "quantity": 4 }
+        ],
+        "result": "banded_helm",
+        "quantity": 1
+      },
+      {
+        "id": "smith_banded_arms",
+        "name": "Banded Arms",
+        "trivial": 65,
+        "components": [
+          { "itemId": "iron_ingot", "quantity": 2 },
+          { "itemId": "metal_bits", "quantity": 5 }
+        ],
+        "result": "banded_arms",
+        "quantity": 1
+      },
+      {
+        "id": "smith_banded_breastplate",
+        "name": "Banded Breastplate",
+        "trivial": 80,
+        "components": [
+          { "itemId": "iron_ingot", "quantity": 4 },
+          { "itemId": "metal_bits", "quantity": 6 }
+        ],
+        "result": "banded_breastplate",
+        "quantity": 1
+      },
+      {
+        "id": "smith_banded_legs",
+        "name": "Banded Leggings",
+        "trivial": 75,
+        "components": [
+          { "itemId": "iron_ingot", "quantity": 3 },
+          { "itemId": "metal_bits", "quantity": 5 }
+        ],
+        "result": "banded_legs",
+        "quantity": 1
+      },
+      {
+        "id": "smith_mithril_sword",
+        "name": "Mithril Long Sword",
+        "trivial": 150,
+        "components": [
+          { "itemId": "mithril_bar", "quantity": 2 },
+          { "itemId": "metal_bits", "quantity": 4 }
+        ],
+        "result": "velium_long_sword",
+        "quantity": 1
+      },
+      {
+        "id": "smith_velium_axe",
+        "name": "Velium Battle Axe",
+        "trivial": 200,
+        "components": [
+          { "itemId": "velium_ore", "quantity": 4 },
+          { "itemId": "metal_bits", "quantity": 6 }
+        ],
+        "result": "velium_battle_axe",
+        "quantity": 1
+      },
+      {
+        "id": "smith_bronze_gloves",
+        "name": "Bronze Gloves",
+        "trivial": 40,
+        "components": [
+          { "itemId": "bronze_ingot", "quantity": 1 },
+          { "itemId": "metal_bits", "quantity": 3 }
+        ],
+        "result": "banded_gloves",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "tailoring",
+    "name": "Tailoring",
+    "description": "Crafting clothing and leather armor from hides and silk.",
+    "recipes": [
+      {
+        "id": "tail_leather_vest",
+        "name": "Leather Vest",
+        "trivial": 20,
+        "components": [
+          { "itemId": "wolf_fur", "quantity": 2 },
+          { "itemId": "leather_cord", "quantity": 2 }
+        ],
+        "result": "banded_breastplate",
+        "quantity": 1
+      },
+      {
+        "id": "tail_silk_robe",
+        "name": "Silk Robe",
+        "trivial": 80,
+        "components": [
+          { "itemId": "silk_thread", "quantity": 4 },
+          { "itemId": "cured_silk", "quantity": 2 }
+        ],
+        "result": "robe_of_the_oracle",
+        "quantity": 1
+      },
+      {
+        "id": "tail_spider_silk_robe",
+        "name": "Spider Silk Robe",
+        "trivial": 100,
+        "components": [
+          { "itemId": "spider_silk", "quantity": 3 },
+          { "itemId": "cured_silk", "quantity": 2 }
+        ],
+        "result": "flowing_black_robe",
+        "quantity": 1
+      },
+      {
+        "id": "tail_loam_armor",
+        "name": "Loam Encrusted Armor",
+        "trivial": 120,
+        "components": [
+          { "itemId": "rockhopper_hide", "quantity": 2 },
+          { "itemId": "wolf_fur", "quantity": 1 }
+        ],
+        "result": "loam_encrusted_armor",
+        "quantity": 1
+      },
+      {
+        "id": "tail_monks_tunic",
+        "name": "Fighting Tunic",
+        "trivial": 140,
+        "components": [
+          { "itemId": "silk_thread", "quantity": 3 },
+          { "itemId": "cured_silk", "quantity": 3 },
+          { "itemId": "metal_bits", "quantity": 2 }
+        ],
+        "result": "wus_fighting_tunic",
+        "quantity": 1
+      },
+      {
+        "id": "tail_dragonscale_boots",
+        "name": "Dragonscale Boots",
+        "trivial": 200,
+        "components": [
+          { "itemId": "dragon_scales", "quantity": 2 },
+          { "itemId": "leather_cord", "quantity": 3 }
+        ],
+        "result": "white_dragonscale_boots",
+        "quantity": 1
+      },
+      {
+        "id": "tail_fungi_tunic",
+        "name": "Fungi Tunic",
+        "trivial": 180,
+        "components": [
+          { "itemId": "forageable_plants", "quantity": 5 },
+          { "itemId": "silk_thread", "quantity": 4 }
+        ],
+        "result": "fungi_tunic",
+        "quantity": 1
+      },
+      {
+        "id": "tail_bard_robe",
+        "name": "Traveling Robe",
+        "trivial": 60,
+        "components": [
+          { "itemId": "silk_thread", "quantity": 3 },
+          { "itemId": "leather_cord", "quantity": 2 }
+        ],
+        "result": "shadowknight_robe",
+        "quantity": 1
+      },
+      {
+        "id": "tail_leather_boots",
+        "name": "Leather Boots",
+        "trivial": 30,
+        "components": [
+          { "itemId": "wolf_fur", "quantity": 1 },
+          { "itemId": "leather_cord", "quantity": 2 }
+        ],
+        "result": "banded_boots",
+        "quantity": 1
+      },
+      {
+        "id": "tail_cloth_gloves",
+        "name": "Cloth Gloves",
+        "trivial": 15,
+        "components": [
+          { "itemId": "silk_thread", "quantity": 2 }
+        ],
+        "result": "banded_gloves",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "baking",
+    "name": "Baking",
+    "description": "Preparing food that restores health and provides buffs.",
+    "recipes": [
+      {
+        "id": "bake_bread",
+        "name": "Baked Bread",
+        "trivial": 15,
+        "components": [
+          { "itemId": "forageable_plants", "quantity": 2 },
+          { "itemId": "flask_of_water", "quantity": 1 }
+        ],
+        "result": "honey_mead",
+        "quantity": 2
+      },
+      {
+        "id": "bake_meat_pie",
+        "name": "Meat Pie",
+        "trivial": 40,
+        "components": [
+          { "itemId": "wolf_fur", "quantity": 1 },
+          { "itemId": "forageable_plants", "quantity": 2 },
+          { "itemId": "flask_of_water", "quantity": 1 }
+        ],
+        "result": "honey_mead",
+        "quantity": 3
+      },
+      {
+        "id": "bake_gnoll_stew",
+        "name": "Gnoll Stew",
+        "trivial": 25,
+        "components": [
+          { "itemId": "gnoll_fang", "quantity": 1 },
+          { "itemId": "forageable_plants", "quantity": 1 },
+          { "itemId": "flask_of_water", "quantity": 1 }
+        ],
+        "result": "honey_mead",
+        "quantity": 2
+      },
+      {
+        "id": "bake_spider_kabob",
+        "name": "Spider Kabob",
+        "trivial": 60,
+        "components": [
+          { "itemId": "spider_silk", "quantity": 1 },
+          { "itemId": "forageable_plants", "quantity": 1 }
+        ],
+        "result": "honey_mead",
+        "quantity": 2
+      },
+      {
+        "id": "bake_honeycake",
+        "name": "Honeycake",
+        "trivial": 30,
+        "components": [
+          { "itemId": "forageable_plants", "quantity": 3 },
+          { "itemId": "flask_of_water", "quantity": 2 }
+        ],
+        "result": "honey_mead",
+        "quantity": 3
+      },
+      {
+        "id": "bake_fish_roll",
+        "name": "Fish Roll",
+        "trivial": 20,
+        "components": [
+          { "itemId": "forageable_plants", "quantity": 2 },
+          { "itemId": "flask_of_water", "quantity": 1 }
+        ],
+        "result": "honey_mead",
+        "quantity": 2
+      },
+      {
+        "id": "bake_hardtack",
+        "name": "Hardtack",
+        "trivial": 10,
+        "components": [
+          { "itemId": "forageable_plants", "quantity": 1 },
+          { "itemId": "flask_of_water", "quantity": 1 }
+        ],
+        "result": "honey_mead",
+        "quantity": 1
+      },
+      {
+        "id": "bake_kiola_cake",
+        "name": "Kiola Nut Cake",
+        "trivial": 50,
+        "components": [
+          { "itemId": "kiola_nut", "quantity": 2 },
+          { "itemId": "forageable_plants", "quantity": 2 },
+          { "itemId": "flask_of_water", "quantity": 1 }
+        ],
+        "result": "honey_mead",
+        "quantity": 4
+      },
+      {
+        "id": "bake_dragon_steak",
+        "name": "Dragon Steak",
+        "trivial": 150,
+        "components": [
+          { "itemId": "dragon_scales", "quantity": 1 },
+          { "itemId": "forageable_plants", "quantity": 2 },
+          { "itemId": "flask_of_water", "quantity": 1 }
+        ],
+        "result": "honey_mead",
+        "quantity": 10
+      },
+      {
+        "id": "bake_giant_stew",
+        "name": "Giant Stew",
+        "trivial": 100,
+        "components": [
+          { "itemId": "giant_warrior_helm", "quantity": 1 },
+          { "itemId": "forageable_plants", "quantity": 3 },
+          { "itemId": "flask_of_water", "quantity": 2 }
+        ],
+        "result": "honey_mead",
+        "quantity": 8
+      }
+    ]
+  },
+  {
+    "id": "brewing",
+    "name": "Brewing",
+    "description": "Creating alcoholic beverages with various effects.",
+    "recipes": [
+      {
+        "id": "brew_honey_mead",
+        "name": "Honey Mead",
+        "trivial": 20,
+        "components": [
+          { "itemId": "forageable_plants", "quantity": 2 },
+          { "itemId": "flask_of_water", "quantity": 1 },
+          { "itemId": "kiola_nut", "quantity": 1 }
+        ],
+        "result": "honey_mead",
+        "quantity": 4
+      },
+      {
+        "id": "brew_gnoll_grog",
+        "name": "Gnoll Grog",
+        "trivial": 35,
+        "components": [
+          { "itemId": "gnoll_fang", "quantity": 1 },
+          { "itemId": "forageable_plants", "quantity": 2 },
+          { "itemId": "flask_of_water", "quantity": 2 }
+        ],
+        "result": "honey_mead",
+        "quantity": 4
+      },
+      {
+        "id": "brew_elven_wine",
+        "name": "Elven Wine",
+        "trivial": 80,
+        "components": [
+          { "itemId": "forageable_plants", "quantity": 4 },
+          { "itemId": "flask_of_water", "quantity": 2 },
+          { "itemId": "kiola_nut", "quantity": 2 }
+        ],
+        "result": "honey_mead",
+        "quantity": 6
+      },
+      {
+        "id": "brew_dragon_ale",
+        "name": "Dragon Ale",
+        "trivial": 180,
+        "components": [
+          { "itemId": "dragon_scales", "quantity": 1 },
+          { "itemId": "forageable_plants", "quantity": 3 },
+          { "itemId": "flask_of_water", "quantity": 2 }
+        ],
+        "result": "honey_mead",
+        "quantity": 12
+      },
+      {
+        "id": "brew_surefall_cider",
+        "name": "Surefall Cider",
+        "trivial": 50,
+        "components": [
+          { "itemId": "forageable_plants", "quantity": 3 },
+          { "itemId": "flask_of_water", "quantity": 2 }
+        ],
+        "result": "honey_mead",
+        "quantity": 5
+      },
+      {
+        "id": "brew_velious_frost",
+        "name": "Velious Frost",
+        "trivial": 150,
+        "components": [
+          { "itemId": "velium_ore", "quantity": 1 },
+          { "itemId": "flask_of_water", "quantity": 3 }
+        ],
+        "result": "honey_mead",
+        "quantity": 8
+      },
+      {
+        "id": "brew_troll_swill",
+        "name": "Troll Swill",
+        "trivial": 10,
+        "components": [
+          { "itemId": "flask_of_water", "quantity": 1 },
+          { "itemId": "forageable_plants", "quantity": 1 }
+        ],
+        "result": "honey_mead",
+        "quantity": 2
+      },
+      {
+        "id": "brew_ogre_brew",
+        "name": "Ogre Brew",
+        "trivial": 25,
+        "components": [
+          { "itemId": "forageable_plants", "quantity": 2 },
+          { "itemId": "flask_of_water", "quantity": 1 }
+        ],
+        "result": "honey_mead",
+        "quantity": 3
+      },
+      {
+        "id": "brew_halfling_pipeweed",
+        "name": "Halfling Pipeweed Brew",
+        "trivial": 60,
+        "components": [
+          { "itemId": "forageable_plants", "quantity": 4 },
+          { "itemId": "flask_of_water", "quantity": 2 }
+        ],
+        "result": "honey_mead",
+        "quantity": 6
+      },
+      {
+        "id": "brew_froglok_juice",
+        "name": "Froglok Juice",
+        "trivial": 100,
+        "components": [
+          { "itemId": "forageable_plants", "quantity": 3 },
+          { "itemId": "flask_of_water", "quantity": 3 },
+          { "itemId": "bone_chips", "quantity": 1 }
+        ],
+        "result": "honey_mead",
+        "quantity": 8
+      }
+    ]
+  },
+  {
+    "id": "fletching",
+    "name": "Fletching",
+    "description": "Crafting arrows and other ranged ammunition.",
+    "recipes": [
+      {
+        "id": "fletch_wood_arrow",
+        "name": "Wood Arrow",
+        "trivial": 12,
+        "components": [
+          { "itemId": "forageable_plants", "quantity": 2 },
+          { "itemId": "wolf_fur", "quantity": 1 }
+        ],
+        "result": "bronze_dagger",
+        "quantity": 20
+      },
+      {
+        "id": "fletch_bone_arrow",
+        "name": "Bone Arrow",
+        "trivial": 40,
+        "components": [
+          { "itemId": "bone_chips", "quantity": 2 },
+          { "itemId": "forageable_plants", "quantity": 1 }
+        ],
+        "result": "bronze_dagger",
+        "quantity": 15
+      },
+      {
+        "id": "fletch_fang_arrow",
+        "name": "Gnoll Fang Arrow",
+        "trivial": 55,
+        "components": [
+          { "itemId": "gnoll_fang", "quantity": 2 },
+          { "itemId": "forageable_plants", "quantity": 2 }
+        ],
+        "result": "bronze_dagger",
+        "quantity": 12
+      },
+      {
+        "id": "fletch_bronze_arrow",
+        "name": "Bronze Tipped Arrow",
+        "trivial": 70,
+        "components": [
+          { "itemId": "bronze_ingot", "quantity": 1 },
+          { "itemId": "forageable_plants", "quantity": 2 }
+        ],
+        "result": "rusty_dagger",
+        "quantity": 20
+      },
+      {
+        "id": "fletch_mithril_arrow",
+        "name": "Mithril Arrow",
+        "trivial": 130,
+        "components": [
+          { "itemId": "mithril_bar", "quantity": 1 },
+          { "itemId": "forageable_plants", "quantity": 2 }
+        ],
+        "result": "bronze_dagger",
+        "quantity": 25
+      },
+      {
+        "id": "fletch_velium_arrow",
+        "name": "Velium Arrow",
+        "trivial": 200,
+        "components": [
+          { "itemId": "velium_ore", "quantity": 1 },
+          { "itemId": "forageable_plants", "quantity": 2 }
+        ],
+        "result": "bronze_dagger",
+        "quantity": 30
+      },
+      {
+        "id": "fletch_short_bow",
+        "name": "Short Bow",
+        "trivial": 45,
+        "components": [
+          { "itemId": "forageable_plants", "quantity": 3 },
+          { "itemId": "leather_cord", "quantity": 2 }
+        ],
+        "result": "worn_great_staff",
+        "quantity": 1
+      },
+      {
+        "id": "fletch_long_bow",
+        "name": "Long Bow",
+        "trivial": 90,
+        "components": [
+          { "itemId": "forageable_plants", "quantity": 4 },
+          { "itemId": "leather_cord", "quantity": 3 }
+        ],
+        "result": "worn_great_staff",
+        "quantity": 1
+      },
+      {
+        "id": "fletch_crossbow",
+        "name": "Crossbow",
+        "trivial": 120,
+        "components": [
+          { "itemId": "forageable_plants", "quantity": 3 },
+          { "itemId": "metal_bits", "quantity": 4 },
+          { "itemId": "leather_cord", "quantity": 2 }
+        ],
+        "result": "worn_great_staff",
+        "quantity": 1
+      },
+      {
+        "id": "fletch_dragon_arrow",
+        "name": "Dragonscale Arrow",
+        "trivial": 250,
+        "components": [
+          { "itemId": "dragon_scales", "quantity": 1 },
+          { "itemId": "velium_ore", "quantity": 1 },
+          { "itemId": "forageable_plants", "quantity": 2 }
+        ],
+        "result": "bronze_dagger",
+        "quantity": 50
+      }
+    ]
+  },
+  {
+    "id": "pottery",
+    "name": "Pottery",
+    "description": "Shaping clay into useful vessels and containers.",
+    "recipes": [
+      {
+        "id": "pot_clay_bowl",
+        "name": "Clay Bowl",
+        "trivial": 10,
+        "components": [
+          { "itemId": "clay", "quantity": 2 },
+          { "itemId": "flask_of_water", "quantity": 1 }
+        ],
+        "result": "unfired_bowl",
+        "quantity": 1
+      },
+      {
+        "id": "pot_flask",
+        "name": "Flask",
+        "trivial": 15,
+        "components": [
+          { "itemId": "clay", "quantity": 2 },
+          { "itemId": "flask_of_water", "quantity": 1 }
+        ],
+        "result": "flask_of_water",
+        "quantity": 1
+      },
+      {
+        "id": "pot_stein",
+        "name": "Pottery Stein",
+        "trivial": 25,
+        "components": [
+          { "itemId": "clay", "quantity": 3 },
+          { "itemId": "flask_of_water", "quantity": 1 }
+        ],
+        "result": "unfired_bowl",
+        "quantity": 1
+      },
+      {
+        "id": "pot_plate",
+        "name": "Pottery Plate",
+        "trivial": 20,
+        "components": [
+          { "itemId": "clay", "quantity": 2 },
+          { "itemId": "flask_of_water", "quantity": 1 }
+        ],
+        "result": "unfired_bowl",
+        "quantity": 1
+      },
+      {
+        "id": "pot_enchanted_urn",
+        "name": "Enchanted Urn",
+        "trivial": 100,
+        "components": [
+          { "itemId": "clay", "quantity": 3 },
+          { "itemId": "flask_of_water", "quantity": 1 },
+          { "itemId": "jade", "quantity": 1 }
+        ],
+        "result": "flask_of_water",
+        "quantity": 3
+      },
+      {
+        "id": "pot_velium_urn",
+        "name": "Velium Urn",
+        "trivial": 200,
+        "components": [
+          { "itemId": "clay", "quantity": 3 },
+          { "itemId": "velium_ore", "quantity": 1 },
+          { "itemId": "flask_of_water", "quantity": 1 }
+        ],
+        "result": "flask_of_water",
+        "quantity": 5
+      },
+      {
+        "id": "pot_gem_inlay",
+        "name": "Gem Inlay Bowl",
+        "trivial": 150,
+        "components": [
+          { "itemId": "clay", "quantity": 4 },
+          { "itemId": "sapphire", "quantity": 1 },
+          { "itemId": "flask_of_water", "quantity": 1 }
+        ],
+        "result": "flask_of_water",
+        "quantity": 4
+      },
+      {
+        "id": "pot_fire_bowl",
+        "name": "Fire Beetle Eye Bowl",
+        "trivial": 60,
+        "components": [
+          { "itemId": "clay", "quantity": 2 },
+          { "itemId": "fire_beetle_eye", "quantity": 2 }
+        ],
+        "result": "unfired_bowl",
+        "quantity": 2
+      },
+      {
+        "id": "pot_ceremonial_helm",
+        "name": "Ceremonial Helm",
+        "trivial": 130,
+        "components": [
+          { "itemId": "clay", "quantity": 4 },
+          { "itemId": "bone_chips", "quantity": 2 },
+          { "itemId": "flask_of_water", "quantity": 1 }
+        ],
+        "result": "banded_helm",
+        "quantity": 1
+      },
+      {
+        "id": "pot_mana_vessel",
+        "name": "Mana Vessel",
+        "trivial": 180,
+        "components": [
+          { "itemId": "clay", "quantity": 3 },
+          { "itemId": "sapphire", "quantity": 1 },
+          { "itemId": "enchanted_velium", "quantity": 1 }
+        ],
+        "result": "flask_of_water",
+        "quantity": 6
+      }
+    ]
+  },
+  {
+    "id": "jewelcraft",
+    "name": "Jewelcraft",
+    "description": "Crafting rings, amulets, and other jewelry from precious metals and gems.",
+    "recipes": [
+      {
+        "id": "jewel_jade_ring",
+        "name": "Jade Ring",
+        "trivial": 40,
+        "components": [
+          { "itemId": "jade", "quantity": 1 },
+          { "itemId": "bronze_ingot", "quantity": 1 }
+        ],
+        "result": "enchanted_ring",
+        "quantity": 1
+      },
+      {
+        "id": "jewel_sapphire_ring",
+        "name": "Sapphire Ring",
+        "trivial": 100,
+        "components": [
+          { "itemId": "sapphire", "quantity": 1 },
+          { "itemId": "mithril_bar", "quantity": 1 }
+        ],
+        "result": "enchanted_ring",
+        "quantity": 1
+      },
+      {
+        "id": "jewel_diamond_ring",
+        "name": "Diamond Ring",
+        "trivial": 180,
+        "components": [
+          { "itemId": "diamond", "quantity": 1 },
+          { "itemId": "mithril_bar", "quantity": 2 }
+        ],
+        "result": "enchanted_ring",
+        "quantity": 1
+      },
+      {
+        "id": "jewel_strength_amulet",
+        "name": "Strength Amulet",
+        "trivial": 60,
+        "components": [
+          { "itemId": "jade", "quantity": 1 },
+          { "itemId": "iron_ingot", "quantity": 1 },
+          { "itemId": "leather_cord", "quantity": 1 }
+        ],
+        "result": "strength_amulet",
+        "quantity": 1
+      },
+      {
+        "id": "jewel_beetle_eye_necklace",
+        "name": "Fire Beetle Necklace",
+        "trivial": 30,
+        "components": [
+          { "itemId": "fire_beetle_eye", "quantity": 2 },
+          { "itemId": "leather_cord", "quantity": 1 }
+        ],
+        "result": "strength_amulet",
+        "quantity": 1
+      },
+      {
+        "id": "jewel_mithril_bracer",
+        "name": "Mithril Bracer",
+        "trivial": 140,
+        "components": [
+          { "itemId": "mithril_bar", "quantity": 2 },
+          { "itemId": "sapphire", "quantity": 1 }
+        ],
+        "result": "tolan_darkwood_bracer",
+        "quantity": 1
+      },
+      {
+        "id": "jewel_velium_ring",
+        "name": "Velium Ring",
+        "trivial": 200,
+        "components": [
+          { "itemId": "velium_ore", "quantity": 2 },
+          { "itemId": "diamond", "quantity": 1 }
+        ],
+        "result": "enchanted_ring",
+        "quantity": 1
+      },
+      {
+        "id": "jewel_focus_gem",
+        "name": "Focus Gem",
+        "trivial": 160,
+        "components": [
+          { "itemId": "sapphire", "quantity": 2 },
+          { "itemId": "mithril_bar", "quantity": 1 },
+          { "itemId": "enchanted_velium", "quantity": 1 }
+        ],
+        "result": "enchanter_focus_gem",
+        "quantity": 1
+      },
+      {
+        "id": "jewel_dragon_ring",
+        "name": "Dragon Scale Ring",
+        "trivial": 250,
+        "components": [
+          { "itemId": "dragon_scales", "quantity": 1 },
+          { "itemId": "diamond", "quantity": 1 },
+          { "itemId": "mithril_bar", "quantity": 2 }
+        ],
+        "result": "enchanted_ring",
+        "quantity": 1
+      },
+      {
+        "id": "jewel_mana_focus",
+        "name": "Mage Focus Orb",
+        "trivial": 200,
+        "components": [
+          { "itemId": "sapphire", "quantity": 2 },
+          { "itemId": "enchanted_velium", "quantity": 2 },
+          { "itemId": "diamond", "quantity": 1 }
+        ],
+        "result": "mage_focus_orb",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "research",
+    "name": "Research",
+    "description": "Combining magical components to create spell scrolls and magical items.",
+    "recipes": [
+      {
+        "id": "research_fear",
+        "name": "Research: Fear",
+        "trivial": 50,
+        "components": [
+          { "itemId": "bat_wing", "quantity": 2 },
+          { "itemId": "bone_chips", "quantity": 2 }
+        ],
+        "result": "bone_chips",
+        "quantity": 1
+      },
+      {
+        "id": "research_lifetap",
+        "name": "Research: Lifetap",
+        "trivial": 40,
+        "components": [
+          { "itemId": "bone_chips", "quantity": 3 },
+          { "itemId": "bat_wing", "quantity": 1 }
+        ],
+        "result": "bone_chips",
+        "quantity": 1
+      },
+      {
+        "id": "research_heal",
+        "name": "Research: Heal",
+        "trivial": 60,
+        "components": [
+          { "itemId": "spider_silk", "quantity": 1 },
+          { "itemId": "forageable_plants", "quantity": 2 },
+          { "itemId": "flask_of_water", "quantity": 1 }
+        ],
+        "result": "flask_of_water",
+        "quantity": 1
+      },
+      {
+        "id": "research_sow",
+        "name": "Research: Spirit of Wolf",
+        "trivial": 55,
+        "components": [
+          { "itemId": "wolf_fur", "quantity": 2 },
+          { "itemId": "forageable_plants", "quantity": 1 }
+        ],
+        "result": "wolf_fur",
+        "quantity": 1
+      },
+      {
+        "id": "research_mez",
+        "name": "Research: Mesmerize",
+        "trivial": 45,
+        "components": [
+          { "itemId": "spider_silk", "quantity": 2 },
+          { "itemId": "jade", "quantity": 1 }
+        ],
+        "result": "jade",
+        "quantity": 1
+      },
+      {
+        "id": "research_nuke",
+        "name": "Research: Shock of Ice",
+        "trivial": 35,
+        "components": [
+          { "itemId": "velium_ore", "quantity": 1 },
+          { "itemId": "flask_of_water", "quantity": 2 }
+        ],
+        "result": "flask_of_water",
+        "quantity": 2
+      },
+      {
+        "id": "research_slow",
+        "name": "Research: Slow",
+        "trivial": 80,
+        "components": [
+          { "itemId": "bone_chips", "quantity": 2 },
+          { "itemId": "spider_silk", "quantity": 2 }
+        ],
+        "result": "spider_silk",
+        "quantity": 1
+      },
+      {
+        "id": "research_clarity",
+        "name": "Research: Clarity",
+        "trivial": 120,
+        "components": [
+          { "itemId": "sapphire", "quantity": 1 },
+          { "itemId": "spider_silk", "quantity": 2 },
+          { "itemId": "jade", "quantity": 1 }
+        ],
+        "result": "jade",
+        "quantity": 2
+      },
+      {
+        "id": "research_dots",
+        "name": "Research: Bond of Death",
+        "trivial": 100,
+        "components": [
+          { "itemId": "bone_chips", "quantity": 4 },
+          { "itemId": "bat_wing", "quantity": 2 }
+        ],
+        "result": "bone_chips",
+        "quantity": 2
+      },
+      {
+        "id": "research_gate",
+        "name": "Research: Gate",
+        "trivial": 70,
+        "components": [
+          { "itemId": "sapphire", "quantity": 1 },
+          { "itemId": "flask_of_water", "quantity": 2 },
+          { "itemId": "jade", "quantity": 1 }
+        ],
+        "result": "flask_of_water",
+        "quantity": 3
+      }
+    ]
+  }
+]

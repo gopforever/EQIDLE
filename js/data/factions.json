@@ -1,0 +1,122 @@
+[
+  {
+    "id": "freeport_militia",
+    "name": "Freeport Militia",
+    "description": "The military force that keeps order in the city of Freeport. Loyal to the Overlord.",
+    "allies": ["merchants_of_qeynos"],
+    "enemies": ["bloodsabers", "kithicor_darkies"],
+    "startingValue": 0
+  },
+  {
+    "id": "guards_of_qeynos",
+    "name": "Guards of Qeynos",
+    "description": "The noble guard force protecting the city of Qeynos from evil.",
+    "allies": ["priests_of_life", "merchants_of_qeynos"],
+    "enemies": ["bloodsabers", "corrupt_qeynos_guards"],
+    "startingValue": 0
+  },
+  {
+    "id": "bloodsabers",
+    "name": "Bloodsabers",
+    "description": "A secretive cult of necromancers hiding beneath Qeynos, servants of Bertoxxulous.",
+    "allies": ["corrupt_qeynos_guards", "heretics"],
+    "enemies": ["guards_of_qeynos", "priests_of_life"],
+    "startingValue": -500
+  },
+  {
+    "id": "corrupt_qeynos_guards",
+    "name": "Corrupt Qeynos Guards",
+    "description": "Guards who have been bribed or corrupted by the Bloodsabers.",
+    "allies": ["bloodsabers"],
+    "enemies": ["guards_of_qeynos"],
+    "startingValue": -500
+  },
+  {
+    "id": "crushbone_orcs",
+    "name": "Crushbone Orcs",
+    "description": "The aggressive orc clan based in Crushbone, led by Emperor Crushbone.",
+    "allies": ["runnyeye_goblins"],
+    "enemies": ["guards_of_qeynos", "merchants_of_qeynos"],
+    "startingValue": -1000
+  },
+  {
+    "id": "runnyeye_goblins",
+    "name": "Runnyeye Goblins",
+    "description": "The treacherous goblin tribe of Runnyeye, often allied with the Crushbone orcs.",
+    "allies": ["crushbone_orcs"],
+    "enemies": ["guards_of_qeynos"],
+    "startingValue": -1000
+  },
+  {
+    "id": "claws_of_veeshan",
+    "name": "Claws of Veeshan",
+    "description": "The dragon faction of Veeshan's Peak, the most powerful dragons in Norrath.",
+    "allies": ["ring_of_scale"],
+    "enemies": ["coldain", "kromzek"],
+    "startingValue": -2000
+  },
+  {
+    "id": "coldain",
+    "name": "Coldain",
+    "description": "The dwarven people of the Wakening Land and Velious, fierce fighters against the giants.",
+    "allies": ["guards_of_qeynos"],
+    "enemies": ["kromzek", "kromrif", "claws_of_veeshan"],
+    "startingValue": 0
+  },
+  {
+    "id": "kromzek",
+    "name": "Kromzek",
+    "description": "The Storm Giants of Kael Drakkel, enemies of the Coldain and worshippers of Rallos Zek.",
+    "allies": ["kromrif"],
+    "enemies": ["coldain", "guards_of_qeynos"],
+    "startingValue": -2000
+  },
+  {
+    "id": "kromrif",
+    "name": "Kromrif",
+    "description": "The Frost Giants allied with the Kromzek, found across the Velious frontier.",
+    "allies": ["kromzek"],
+    "enemies": ["coldain", "priests_of_life"],
+    "startingValue": -2000
+  },
+  {
+    "id": "priests_of_life",
+    "name": "Priests of Life",
+    "description": "The holy clerics and priests who serve the gods of good in Norrath.",
+    "allies": ["guards_of_qeynos", "coldain"],
+    "enemies": ["bloodsabers", "heretics"],
+    "startingValue": 0
+  },
+  {
+    "id": "heretics",
+    "name": "Heretics",
+    "description": "Followers of Innoruuk who have infiltrated the Plane of Hate. Enemies of all goodly factions.",
+    "allies": ["bloodsabers"],
+    "enemies": ["priests_of_life", "guards_of_qeynos"],
+    "startingValue": -1000
+  },
+  {
+    "id": "ring_of_scale",
+    "name": "Ring of Scale",
+    "description": "The draconic faction of Kunark, led by ancient dragons who oppose the Claws of Veeshan.",
+    "allies": ["claws_of_veeshan"],
+    "enemies": ["coldain"],
+    "startingValue": -2000
+  },
+  {
+    "id": "merchants_of_qeynos",
+    "name": "Merchants of Qeynos",
+    "description": "The trade guilds and merchant houses that control commerce in Qeynos.",
+    "allies": ["guards_of_qeynos", "freeport_militia"],
+    "enemies": ["bloodsabers"],
+    "startingValue": 0
+  },
+  {
+    "id": "kithicor_darkies",
+    "name": "Kithicor Dark Elves",
+    "description": "Dark elves who haunt the haunted forest of Kithicor, servants of Innoruuk.",
+    "allies": ["heretics", "bloodsabers"],
+    "enemies": ["guards_of_qeynos", "freeport_militia"],
+    "startingValue": -1000
+  }
+]
