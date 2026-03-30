@@ -139,6 +139,7 @@ export class CombatPanel {
         this.gameState.autoFight = !this.gameState.autoFight;
         autoFightBtn.textContent = this.gameState.autoFight ? 'Stop Fighting' : 'Start Fighting';
         autoFightBtn.classList.toggle('btn-active', this.gameState.autoFight);
+        autoFightBtn.classList.toggle('btn-attack-active', this.gameState.autoFight);
         if (!this.gameState.autoFight) {
           this.combatSystem.stopCombat();
         }
@@ -153,20 +154,25 @@ export class CombatPanel {
         s.class === player.classId && s.level <= player.level
       );
       spellBar.innerHTML = '';
-      for (const spell of classSpells.slice(0, 8)) {
-        const btn = document.createElement('button');
-        btn.className = 'btn btn-spell';
-        btn.textContent = spell.name;
-        btn.title = `${spell.name} - ${spell.manaCost} mana`;
-        btn.addEventListener('click', () => {
-          const result = this.combatSystem.castSpell(spell);
-          if (!result.success) {
-            if (this.notifications) this.notifications.warning(result.reason || 'Cannot cast');
-          } else {
-            if (this.notifications) this.notifications.info(`Cast ${spell.name}`);
-          }
-        });
-        spellBar.appendChild(btn);
+      if (classSpells.length === 0) {
+        const playerClass = player.className || player.classId || 'Warrior';
+        spellBar.innerHTML = `<span class="no-spells-msg">⚔️ ${playerClass} — Melee Combat Only</span>`;
+      } else {
+        for (const spell of classSpells.slice(0, 8)) {
+          const btn = document.createElement('button');
+          btn.className = 'btn btn-spell';
+          btn.textContent = spell.name;
+          btn.title = `${spell.name} - ${spell.manaCost} mana`;
+          btn.addEventListener('click', () => {
+            const result = this.combatSystem.castSpell(spell);
+            if (!result.success) {
+              if (this.notifications) this.notifications.warning(result.reason || 'Cannot cast');
+            } else {
+              if (this.notifications) this.notifications.info(`Cast ${spell.name}`);
+            }
+          });
+          spellBar.appendChild(btn);
+        }
       }
     }
 

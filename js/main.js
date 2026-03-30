@@ -93,11 +93,40 @@ function buildDefaultGameState(classData, classId, charName, deityId) {
 // ─────────────────────────────────────────────
 // Character Creation Modal
 // ─────────────────────────────────────────────
-function showCharCreateModal(data, onComplete) {
+function showCharCreateModal(data, onComplete, onContinue) {
   const modal = document.getElementById('modal-char-create');
   const classSelect = document.getElementById('char-create-class');
   const deitySelect = document.getElementById('char-create-deity');
   const classDesc = document.getElementById('class-description');
+
+  // Emergency escape: if a save with a player name already exists, offer to continue
+  if (onContinue) {
+    const tempSave = new SaveManager({});
+    const existingData = tempSave.load();
+    if (existingData && existingData.player && existingData.player.name) {
+      const playerName = existingData.player.name;
+      // Remove any pre-existing continue button to avoid duplicates
+      const existingBtn = modal.querySelector('.btn-continue');
+      if (existingBtn) existingBtn.remove();
+      const continueBtn = document.createElement('button');
+      continueBtn.className = 'btn btn-gold btn-continue';
+      continueBtn.textContent = `▶ Continue as ${playerName}`;
+      continueBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+        if (!existingData.combat) existingData.combat = { inCombat: false, currentEnemy: null };
+        if (!existingData.factions) existingData.factions = {};
+        if (!existingData.ghosts) existingData.ghosts = [];
+        if (!existingData.ghostAuctionHouse) existingData.ghostAuctionHouse = [];
+        if (!existingData.activeBuffs) existingData.activeBuffs = [];
+        if (!existingData.spellRecastTimers) existingData.spellRecastTimers = {};
+        if (!existingData.player.currentHp || existingData.player.currentHp <= 0) {
+          existingData.player.currentHp = Math.max(1, Math.floor((existingData.player.maxHp || 100) * 0.2));
+        }
+        onContinue(existingData);
+      });
+      modal.insertBefore(continueBtn, modal.firstChild);
+    }
+  }
 
   // Populate class select
   for (const cls of data.classes) {
@@ -578,6 +607,15 @@ async function main() {
     if (!gameState.activeBuffs) gameState.activeBuffs = [];
     if (!gameState.spellRecastTimers) gameState.spellRecastTimers = {};
 
+    // Safety: if save is corrupted and name is missing, use a default
+    if (!gameState.player.name) {
+      gameState.player.name = 'Adventurer';
+    }
+    // Safety: never start with 0 or negative HP
+    if (!gameState.player.currentHp || gameState.player.currentHp <= 0) {
+      gameState.player.currentHp = Math.max(1, Math.floor((gameState.player.maxHp || 100) * 0.2));
+    }
+
     // Hide modal
     const modal = document.getElementById('modal-char-create');
     if (modal) modal.style.display = 'none';
@@ -587,7 +625,7 @@ async function main() {
     showCharCreateModal(data, (name, classId, deityId) => {
       const gameState = buildDefaultGameState(data.classes, classId, name, deityId);
       startGame(gameState);
-    });
+    }, startGame);
   }
 }
 

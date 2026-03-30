@@ -7,6 +7,10 @@ export class SaveManager {
 
   save() {
     try {
+      // Safety: never save dead state (currentHp <= 0)
+      if (this.gameState.player && this.gameState.player.currentHp <= 0) {
+        this.gameState.player.currentHp = Math.max(1, Math.floor((this.gameState.player.maxHp || 100) * 0.2));
+      }
       const data = JSON.stringify({
         ...this.gameState,
         savedAt: Date.now(),
