@@ -947,3 +947,30 @@ textarea.export-box {
 .phase-shift-flash {
   animation: phaseShiftFlash 0.8s ease-in-out;
 }
+
+/* --- Attack button active state --- */
+.btn-attack-active {
+  background: var(--hp) !important;
+  box-shadow: 0 0 12px rgba(192, 57, 43, 0.5);
+  animation: pulse-attack 1.2s ease-in-out infinite;
+}
+
+@keyframes pulse-attack {
+  0%, 100% { box-shadow: 0 0 8px rgba(192, 57, 43, 0.4); }
+  50%       { box-shadow: 0 0 18px rgba(192, 57, 43, 0.8); }
+}
+
+/* --- No spells message --- */
+.no-spells-msg {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+/* --- Continue Adventure button in char creation modal --- */
+.btn-continue {
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}

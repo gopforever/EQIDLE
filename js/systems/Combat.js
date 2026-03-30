@@ -8,7 +8,25 @@ export class CombatSystem {
 
   update(delta, tick) {
     const state = this.gameState;
-    if (!state.combat.inCombat || !state.combat.currentEnemy) return;
+
+    // Out-of-combat HP/mana regen (1% per tick, min 1)
+    if (!state.combat.inCombat) {
+      if (state.player.currentHp < state.player.maxHp) {
+        state.player.currentHp = Math.min(
+          state.player.maxHp,
+          state.player.currentHp + Math.max(1, Math.floor(state.player.maxHp * 0.01))
+        );
+      }
+      if (state.player.currentMana < state.player.maxMana) {
+        state.player.currentMana = Math.min(
+          state.player.maxMana,
+          state.player.currentMana + Math.max(1, Math.floor(state.player.maxMana * 0.015))
+        );
+      }
+      return;
+    }
+
+    if (!state.combat.currentEnemy) return;
 
     this.autoAttackTick++;
 
@@ -294,9 +312,9 @@ export class CombatSystem {
     const xpLoss = Math.floor((state.player.xp || 0) * 0.1);
     state.player.xp = Math.max(0, (state.player.xp || 0) - xpLoss);
 
-    // Reset HP to 10%
-    state.player.currentHp = Math.max(1, Math.floor(state.player.maxHp * 0.1));
-    state.player.currentMana = 0;
+    // Respawn at 20% HP/mana — never 0, never clears player.name
+    state.player.currentHp = Math.max(1, Math.floor(state.player.maxHp * 0.2));
+    state.player.currentMana = Math.max(0, Math.floor((state.player.maxMana || 0) * 0.2));
 
     // End combat
     state.combat.inCombat = false;
@@ -304,6 +322,7 @@ export class CombatSystem {
     this.dotTimers = [];
 
     this.eventBus.emit('death', { xpLoss });
+    this.eventBus.emit('combat_stop', {});
   }
 
   stopCombat() {
