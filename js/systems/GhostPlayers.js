@@ -1,4 +1,5 @@
 import { eventBus } from '../engine/EventBus.js';
+import { simulateGhostKill, getConColor } from '../engine/CombatFormulas.js';
 
 const GHOST_NAMES = [
   'Aelindra', 'Baelorn', 'Caeldris', 'Draegon', 'Elorath', 'Fyrandel', 'Gaelthos', 'Haervain',
@@ -163,22 +164,44 @@ export class GhostPlayerSystem {
   }
 
   _gainXP(ghost, tick) {
-    const xpGain = Math.floor(10 * (1 + ghost.level * 0.5));
-    ghost.xp += xpGain;
+    // Find a monster from the ghost's current zone to fight
+    const zone = this.zones.find(z => z.id === ghost.zone);
+    const availableMonsters = zone && zone.monsters
+      ? zone.monsters.map(id => this.monsters.find(m => m.id === id)).filter(Boolean)
+      : [];
+
+    if (availableMonsters.length > 0) {
+      // Pick a random monster from the zone
+      const monster = availableMonsters[Math.floor(Math.random() * availableMonsters.length)];
+      const result  = simulateGhostKill(ghost, monster);
+
+      if (result.success) {
+        ghost.xp += result.xp;
+
+        // Roll for loot (same as before)
+        if (tick % 30 === 0 && Math.random() < 0.3) {
+          this._rollLoot(ghost);
+        }
+      }
+      // If ghost can't beat the monster, they don't gain XP this tick — zone up/down naturally
+    } else {
+      // Fallback: flat gain if zone has no monster data
+      ghost.xp += Math.floor(10 * (1 + ghost.level * 0.5));
+      // Roll for loot from zone monster
+      if (tick % 30 === 0 && Math.random() < 0.3) {
+        this._rollLoot(ghost);
+      }
+    }
+
+    // Level up check
     const xpNeeded = Math.floor(1000 * Math.pow(ghost.level, 1.75));
     if (ghost.xp >= xpNeeded && ghost.level < 60) {
       ghost.level++;
       ghost.xp = 0;
-      // Move to better zone
       this._updateZone(ghost);
-      // Broadcast level up
       const msg = `${ghost.name} has reached level ${ghost.level}!`;
       this._addChat(msg);
       eventBus.emit('ghost_levelup', { ghost, message: msg });
-    }
-    // Roll for loot from zone monster
-    if (tick % 30 === 0 && Math.random() < 0.3) {
-      this._rollLoot(ghost);
     }
   }
 

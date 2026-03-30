@@ -1,5 +1,38 @@
 /* === Components === */
 
+/* --- Con Colors --- */
+.con-grey   { color: #888; }
+.con-green  { color: #27ae60; }
+.con-blue   { color: #2980b9; }
+.con-white  { color: #ecf0f1; }
+.con-yellow { color: #f1c40f; }
+.con-red    { color: #e74c3c; font-weight: bold; }
+
+.con-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* --- Hit type colors in combat log --- */
+.hit-miss     { color: var(--muted); font-style: italic; }
+.hit-dodge    { color: #2980b9; }
+.hit-parry    { color: #8e44ad; }
+.hit-critical { color: #f39c12; font-weight: bold; }
+.hit-glancing { color: #7f8c8d; }
+.hit-normal   { color: var(--text); }
+
+.combat-log {
+  margin-top: 6px;
+  max-height: 120px;
+  overflow-y: auto;
+  font-size: 11px;
+}
+
+.combat-log-entry {
+  padding: 1px 0;
+}
+
 /* --- Progress Bars --- */
 .progress-bar {
   width: 100%;

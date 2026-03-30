@@ -11,8 +11,14 @@
     "goldReward": 1,
     "spriteClass": "monster-gnoll_pup",
     "lootTable": [
-      { "itemId": "gnoll_fang", "dropChance": 0.5 },
-      { "itemId": "leather_cord", "dropChance": 0.15 }
+      {
+        "itemId": "gnoll_fang",
+        "dropChance": 0.5
+      },
+      {
+        "itemId": "leather_cord",
+        "dropChance": 0.15
+      }
     ],
     "faction": "gnolls",
     "isUndead": false,
@@ -31,9 +37,18 @@
     "goldReward": 3,
     "spriteClass": "monster-gnoll_guard",
     "lootTable": [
-      { "itemId": "gnoll_fang", "dropChance": 0.6 },
-      { "itemId": "leather_cord", "dropChance": 0.25 },
-      { "itemId": "rusty_short_sword", "dropChance": 0.1 }
+      {
+        "itemId": "gnoll_fang",
+        "dropChance": 0.6
+      },
+      {
+        "itemId": "leather_cord",
+        "dropChance": 0.25
+      },
+      {
+        "itemId": "rusty_short_sword",
+        "dropChance": 0.1
+      }
     ],
     "faction": "gnolls",
     "isUndead": false,
@@ -52,16 +67,30 @@
     "goldReward": 15,
     "spriteClass": "monster-fippy_darkpaw",
     "lootTable": [
-      { "itemId": "gnoll_fang", "dropChance": 1.0 },
-      { "itemId": "leather_cord", "dropChance": 0.5 },
-      { "itemId": "rusty_short_sword", "dropChance": 0.3 },
-      { "itemId": "bronze_dagger", "dropChance": 0.1 }
+      {
+        "itemId": "gnoll_fang",
+        "dropChance": 1.0
+      },
+      {
+        "itemId": "leather_cord",
+        "dropChance": 0.5
+      },
+      {
+        "itemId": "rusty_short_sword",
+        "dropChance": 0.3
+      },
+      {
+        "itemId": "bronze_dagger",
+        "dropChance": 0.1
+      }
     ],
     "faction": "gnolls",
     "isUndead": false,
     "isSocial": true,
     "isAnimal": true,
-    "isBoss": true
+    "isBoss": true,
+    "ac": 60,
+    "atk": 50
   },
   {
     "id": "orc_pawn",
@@ -75,9 +104,18 @@
     "goldReward": 2,
     "spriteClass": "monster-orc_pawn",
     "lootTable": [
-      { "itemId": "orc_fang", "dropChance": 0.5 },
-      { "itemId": "rusty_axe", "dropChance": 0.15 },
-      { "itemId": "banded_helm", "dropChance": 0.05 }
+      {
+        "itemId": "orc_fang",
+        "dropChance": 0.5
+      },
+      {
+        "itemId": "rusty_axe",
+        "dropChance": 0.15
+      },
+      {
+        "itemId": "banded_helm",
+        "dropChance": 0.05
+      }
     ],
     "faction": "crushbone_orcs",
     "isUndead": false,
@@ -96,9 +134,18 @@
     "goldReward": 5,
     "spriteClass": "monster-orc_legionnaire",
     "lootTable": [
-      { "itemId": "orc_fang", "dropChance": 0.6 },
-      { "itemId": "rusty_axe", "dropChance": 0.2 },
-      { "itemId": "banded_helm", "dropChance": 0.1 }
+      {
+        "itemId": "orc_fang",
+        "dropChance": 0.6
+      },
+      {
+        "itemId": "rusty_axe",
+        "dropChance": 0.2
+      },
+      {
+        "itemId": "banded_helm",
+        "dropChance": 0.1
+      }
     ],
     "faction": "crushbone_orcs",
     "isUndead": false,
@@ -117,9 +164,18 @@
     "goldReward": 9,
     "spriteClass": "monster-orc_warlord",
     "lootTable": [
-      { "itemId": "orc_fang", "dropChance": 0.7 },
-      { "itemId": "banded_helm", "dropChance": 0.2 },
-      { "itemId": "banded_breastplate", "dropChance": 0.05 }
+      {
+        "itemId": "orc_fang",
+        "dropChance": 0.7
+      },
+      {
+        "itemId": "banded_helm",
+        "dropChance": 0.2
+      },
+      {
+        "itemId": "banded_breastplate",
+        "dropChance": 0.05
+      }
     ],
     "faction": "crushbone_orcs",
     "isUndead": false,
@@ -138,9 +194,18 @@
     "goldReward": 12,
     "spriteClass": "monster-orc_centurion",
     "lootTable": [
-      { "itemId": "orc_fang", "dropChance": 0.75 },
-      { "itemId": "banded_breastplate", "dropChance": 0.1 },
-      { "itemId": "bronze_sword", "dropChance": 0.08 }
+      {
+        "itemId": "orc_fang",
+        "dropChance": 0.75
+      },
+      {
+        "itemId": "banded_breastplate",
+        "dropChance": 0.1
+      },
+      {
+        "itemId": "bronze_sword",
+        "dropChance": 0.08
+      }
     ],
     "faction": "crushbone_orcs",
     "isUndead": false,
@@ -159,9 +224,18 @@
     "goldReward": 16,
     "spriteClass": "monster-orc_centurion_elite",
     "lootTable": [
-      { "itemId": "orc_fang", "dropChance": 0.8 },
-      { "itemId": "banded_breastplate", "dropChance": 0.15 },
-      { "itemId": "bronze_sword", "dropChance": 0.12 }
+      {
+        "itemId": "orc_fang",
+        "dropChance": 0.8
+      },
+      {
+        "itemId": "banded_breastplate",
+        "dropChance": 0.15
+      },
+      {
+        "itemId": "bronze_sword",
+        "dropChance": 0.12
+      }
     ],
     "faction": "crushbone_orcs",
     "isUndead": false,
@@ -180,10 +254,22 @@
     "goldReward": 22,
     "spriteClass": "monster-orc_legionmaster",
     "lootTable": [
-      { "itemId": "orc_fang", "dropChance": 0.85 },
-      { "itemId": "banded_breastplate", "dropChance": 0.2 },
-      { "itemId": "bronze_sword", "dropChance": 0.18 },
-      { "itemId": "rubicite_breastplate", "dropChance": 0.01 }
+      {
+        "itemId": "orc_fang",
+        "dropChance": 0.85
+      },
+      {
+        "itemId": "banded_breastplate",
+        "dropChance": 0.2
+      },
+      {
+        "itemId": "bronze_sword",
+        "dropChance": 0.18
+      },
+      {
+        "itemId": "rubicite_breastplate",
+        "dropChance": 0.01
+      }
     ],
     "faction": "crushbone_orcs",
     "isUndead": false,
@@ -202,17 +288,34 @@
     "goldReward": 80,
     "spriteClass": "monster-emperor_crushbone",
     "lootTable": [
-      { "itemId": "orc_fang", "dropChance": 1.0 },
-      { "itemId": "rubicite_breastplate", "dropChance": 0.15 },
-      { "itemId": "bronze_sword", "dropChance": 0.5 },
-      { "itemId": "bronze_dagger", "dropChance": 0.4 },
-      { "itemId": "journeymans_boots", "dropChance": 0.05 }
+      {
+        "itemId": "orc_fang",
+        "dropChance": 1.0
+      },
+      {
+        "itemId": "rubicite_breastplate",
+        "dropChance": 0.15
+      },
+      {
+        "itemId": "bronze_sword",
+        "dropChance": 0.5
+      },
+      {
+        "itemId": "bronze_dagger",
+        "dropChance": 0.4
+      },
+      {
+        "itemId": "journeymans_boots",
+        "dropChance": 0.05
+      }
     ],
     "faction": "crushbone_orcs",
     "isUndead": false,
     "isSocial": true,
     "isAnimal": false,
-    "isBoss": true
+    "isBoss": true,
+    "ac": 120,
+    "atk": 95
   },
   {
     "id": "decaying_skeleton",
@@ -226,8 +329,14 @@
     "goldReward": 1,
     "spriteClass": "monster-decaying_skeleton",
     "lootTable": [
-      { "itemId": "bone_chips", "dropChance": 0.7 },
-      { "itemId": "rusty_dagger", "dropChance": 0.15 }
+      {
+        "itemId": "bone_chips",
+        "dropChance": 0.7
+      },
+      {
+        "itemId": "rusty_dagger",
+        "dropChance": 0.15
+      }
     ],
     "faction": "undead",
     "isUndead": true,
@@ -246,8 +355,14 @@
     "goldReward": 2,
     "spriteClass": "monster-rotting_skeleton",
     "lootTable": [
-      { "itemId": "bone_chips", "dropChance": 0.75 },
-      { "itemId": "rusty_dagger", "dropChance": 0.2 }
+      {
+        "itemId": "bone_chips",
+        "dropChance": 0.75
+      },
+      {
+        "itemId": "rusty_dagger",
+        "dropChance": 0.2
+      }
     ],
     "faction": "undead",
     "isUndead": true,
@@ -266,9 +381,18 @@
     "goldReward": 4,
     "spriteClass": "monster-ancient_skeleton",
     "lootTable": [
-      { "itemId": "bone_chips", "dropChance": 0.8 },
-      { "itemId": "rusty_dagger", "dropChance": 0.25 },
-      { "itemId": "banded_helm", "dropChance": 0.05 }
+      {
+        "itemId": "bone_chips",
+        "dropChance": 0.8
+      },
+      {
+        "itemId": "rusty_dagger",
+        "dropChance": 0.25
+      },
+      {
+        "itemId": "banded_helm",
+        "dropChance": 0.05
+      }
     ],
     "faction": "undead",
     "isUndead": true,
@@ -287,8 +411,14 @@
     "goldReward": 1,
     "spriteClass": "monster-skeleton",
     "lootTable": [
-      { "itemId": "bone_chips", "dropChance": 0.75 },
-      { "itemId": "rusty_short_sword", "dropChance": 0.1 }
+      {
+        "itemId": "bone_chips",
+        "dropChance": 0.75
+      },
+      {
+        "itemId": "rusty_short_sword",
+        "dropChance": 0.1
+      }
     ],
     "faction": "undead",
     "isUndead": true,
@@ -307,9 +437,18 @@
     "goldReward": 3,
     "spriteClass": "monster-skeleton_warrior",
     "lootTable": [
-      { "itemId": "bone_chips", "dropChance": 0.8 },
-      { "itemId": "rusty_short_sword", "dropChance": 0.2 },
-      { "itemId": "banded_helm", "dropChance": 0.07 }
+      {
+        "itemId": "bone_chips",
+        "dropChance": 0.8
+      },
+      {
+        "itemId": "rusty_short_sword",
+        "dropChance": 0.2
+      },
+      {
+        "itemId": "banded_helm",
+        "dropChance": 0.07
+      }
     ],
     "faction": "undead",
     "isUndead": true,
@@ -328,9 +467,18 @@
     "goldReward": 6,
     "spriteClass": "monster-skeleton_knight",
     "lootTable": [
-      { "itemId": "bone_chips", "dropChance": 0.85 },
-      { "itemId": "bronze_sword", "dropChance": 0.1 },
-      { "itemId": "banded_breastplate", "dropChance": 0.08 }
+      {
+        "itemId": "bone_chips",
+        "dropChance": 0.85
+      },
+      {
+        "itemId": "bronze_sword",
+        "dropChance": 0.1
+      },
+      {
+        "itemId": "banded_breastplate",
+        "dropChance": 0.08
+      }
     ],
     "faction": "undead",
     "isUndead": true,
@@ -349,8 +497,14 @@
     "goldReward": 20,
     "spriteClass": "monster-verix_kylox_w",
     "lootTable": [
-      { "itemId": "bone_chips", "dropChance": 1.0 },
-      { "itemId": "rusty_dagger", "dropChance": 0.5 }
+      {
+        "itemId": "bone_chips",
+        "dropChance": 1.0
+      },
+      {
+        "itemId": "rusty_dagger",
+        "dropChance": 0.5
+      }
     ],
     "faction": "undead",
     "isUndead": true,
@@ -369,8 +523,14 @@
     "goldReward": 40,
     "spriteClass": "monster-verix_kylox_m",
     "lootTable": [
-      { "itemId": "bone_chips", "dropChance": 1.0 },
-      { "itemId": "banded_breastplate", "dropChance": 0.3 }
+      {
+        "itemId": "bone_chips",
+        "dropChance": 1.0
+      },
+      {
+        "itemId": "banded_breastplate",
+        "dropChance": 0.3
+      }
     ],
     "faction": "undead",
     "isUndead": true,
@@ -389,15 +549,26 @@
     "goldReward": 100,
     "spriteClass": "monster-verix_kylox",
     "lootTable": [
-      { "itemId": "bone_chips", "dropChance": 1.0 },
-      { "itemId": "rubicite_breastplate", "dropChance": 0.08 },
-      { "itemId": "banded_breastplate", "dropChance": 0.5 }
+      {
+        "itemId": "bone_chips",
+        "dropChance": 1.0
+      },
+      {
+        "itemId": "rubicite_breastplate",
+        "dropChance": 0.08
+      },
+      {
+        "itemId": "banded_breastplate",
+        "dropChance": 0.5
+      }
     ],
     "faction": "undead",
     "isUndead": true,
     "isSocial": false,
     "isAnimal": false,
-    "isBoss": true
+    "isBoss": true,
+    "ac": 160,
+    "atk": 130
   },
   {
     "id": "hatchling",
@@ -411,8 +582,14 @@
     "goldReward": 60,
     "spriteClass": "monster-hatchling",
     "lootTable": [
-      { "itemId": "fire_goblin_skin", "dropChance": 0.5 },
-      { "itemId": "dragon_scales", "dropChance": 0.3 }
+      {
+        "itemId": "fire_goblin_skin",
+        "dropChance": 0.5
+      },
+      {
+        "itemId": "dragon_scales",
+        "dropChance": 0.3
+      }
     ],
     "faction": "ring_of_scale",
     "isUndead": false,
@@ -431,8 +608,14 @@
     "goldReward": 150,
     "spriteClass": "monster-wyrmling",
     "lootTable": [
-      { "itemId": "dragon_scales", "dropChance": 0.5 },
-      { "itemId": "fire_goblin_skin", "dropChance": 0.4 }
+      {
+        "itemId": "dragon_scales",
+        "dropChance": 0.5
+      },
+      {
+        "itemId": "fire_goblin_skin",
+        "dropChance": 0.4
+      }
     ],
     "faction": "ring_of_scale",
     "isUndead": false,
@@ -451,17 +634,31 @@
     "goldReward": 2000,
     "spriteClass": "monster-lord_nagafen",
     "lootTable": [
-      { "itemId": "dragon_scales", "dropChance": 1.0 },
-      { "itemId": "rubicite_breastplate", "dropChance": 0.5 },
-      { "itemId": "manastone", "dropChance": 0.2 },
-      { "itemId": "fbss", "dropChance": 0.1 }
+      {
+        "itemId": "dragon_scales",
+        "dropChance": 1.0
+      },
+      {
+        "itemId": "rubicite_breastplate",
+        "dropChance": 0.5
+      },
+      {
+        "itemId": "manastone",
+        "dropChance": 0.2
+      },
+      {
+        "itemId": "fbss",
+        "dropChance": 0.1
+      }
     ],
     "faction": "ring_of_scale",
     "isUndead": false,
     "isSocial": false,
     "isAnimal": false,
     "isBoss": true,
-    "isRaidBoss": true
+    "isRaidBoss": true,
+    "ac": 350,
+    "atk": 400
   },
   {
     "id": "ghoul",
@@ -475,8 +672,14 @@
     "goldReward": 15,
     "spriteClass": "monster-ghoul",
     "lootTable": [
-      { "itemId": "bone_chips", "dropChance": 0.4 },
-      { "itemId": "bat_wing", "dropChance": 0.3 }
+      {
+        "itemId": "bone_chips",
+        "dropChance": 0.4
+      },
+      {
+        "itemId": "bat_wing",
+        "dropChance": 0.3
+      }
     ],
     "faction": "undead",
     "isUndead": true,
@@ -495,9 +698,18 @@
     "goldReward": 50,
     "spriteClass": "monster-revenant",
     "lootTable": [
-      { "itemId": "bone_chips", "dropChance": 0.5 },
-      { "itemId": "bat_wing", "dropChance": 0.35 },
-      { "itemId": "fbss", "dropChance": 0.02 }
+      {
+        "itemId": "bone_chips",
+        "dropChance": 0.5
+      },
+      {
+        "itemId": "bat_wing",
+        "dropChance": 0.35
+      },
+      {
+        "itemId": "fbss",
+        "dropChance": 0.02
+      }
     ],
     "faction": "undead",
     "isUndead": true,
@@ -516,16 +728,27 @@
     "goldReward": 1200,
     "spriteClass": "monster-maestro_of_rancor",
     "lootTable": [
-      { "itemId": "fbss", "dropChance": 0.3 },
-      { "itemId": "fungi_tunic", "dropChance": 0.15 },
-      { "itemId": "rubicite_breastplate", "dropChance": 0.4 }
+      {
+        "itemId": "fbss",
+        "dropChance": 0.3
+      },
+      {
+        "itemId": "fungi_tunic",
+        "dropChance": 0.15
+      },
+      {
+        "itemId": "rubicite_breastplate",
+        "dropChance": 0.4
+      }
     ],
     "faction": "undead",
     "isUndead": true,
     "isSocial": false,
     "isAnimal": false,
     "isBoss": true,
-    "isRaidBoss": true
+    "isRaidBoss": true,
+    "ac": 300,
+    "atk": 320
   },
   {
     "id": "froglok_gaz",
@@ -539,7 +762,10 @@
     "goldReward": 10,
     "spriteClass": "monster-placeholder",
     "lootTable": [
-      { "itemId": "bone_chips", "dropChance": 0.3 }
+      {
+        "itemId": "bone_chips",
+        "dropChance": 0.3
+      }
     ],
     "faction": "frogloks",
     "isUndead": false,
@@ -558,7 +784,10 @@
     "goldReward": 25,
     "spriteClass": "monster-placeholder",
     "lootTable": [
-      { "itemId": "banded_breastplate", "dropChance": 0.15 }
+      {
+        "itemId": "banded_breastplate",
+        "dropChance": 0.15
+      }
     ],
     "faction": "frogloks",
     "isUndead": false,
@@ -577,7 +806,10 @@
     "goldReward": 80,
     "spriteClass": "monster-spider",
     "lootTable": [
-      { "itemId": "spider_silk", "dropChance": 0.7 }
+      {
+        "itemId": "spider_silk",
+        "dropChance": 0.7
+      }
     ],
     "faction": "plane_of_fear",
     "isUndead": false,
@@ -596,8 +828,14 @@
     "goldReward": 150,
     "spriteClass": "monster-giant_spider",
     "lootTable": [
-      { "itemId": "spider_silk", "dropChance": 0.9 },
-      { "itemId": "rubicite_breastplate", "dropChance": 0.05 }
+      {
+        "itemId": "spider_silk",
+        "dropChance": 0.9
+      },
+      {
+        "itemId": "rubicite_breastplate",
+        "dropChance": 0.05
+      }
     ],
     "faction": "plane_of_fear",
     "isUndead": false,
@@ -616,16 +854,27 @@
     "goldReward": 1800,
     "spriteClass": "monster-mistress_of_scorn",
     "lootTable": [
-      { "itemId": "spider_silk", "dropChance": 1.0 },
-      { "itemId": "rubicite_breastplate", "dropChance": 0.35 },
-      { "itemId": "fungi_tunic", "dropChance": 0.2 }
+      {
+        "itemId": "spider_silk",
+        "dropChance": 1.0
+      },
+      {
+        "itemId": "rubicite_breastplate",
+        "dropChance": 0.35
+      },
+      {
+        "itemId": "fungi_tunic",
+        "dropChance": 0.2
+      }
     ],
     "faction": "plane_of_fear",
     "isUndead": false,
     "isSocial": false,
     "isAnimal": false,
     "isBoss": true,
-    "isRaidBoss": true
+    "isRaidBoss": true,
+    "ac": 280,
+    "atk": 290
   },
   {
     "id": "terror",
@@ -639,7 +888,10 @@
     "goldReward": 1500,
     "spriteClass": "monster-placeholder",
     "lootTable": [
-      { "itemId": "rubicite_breastplate", "dropChance": 0.3 }
+      {
+        "itemId": "rubicite_breastplate",
+        "dropChance": 0.3
+      }
     ],
     "faction": "plane_of_fear",
     "isUndead": false,
@@ -660,7 +912,10 @@
     "goldReward": 1500,
     "spriteClass": "monster-placeholder",
     "lootTable": [
-      { "itemId": "rubicite_breastplate", "dropChance": 0.3 }
+      {
+        "itemId": "rubicite_breastplate",
+        "dropChance": 0.3
+      }
     ],
     "faction": "plane_of_fear",
     "isUndead": false,
@@ -681,7 +936,10 @@
     "goldReward": 1500,
     "spriteClass": "monster-placeholder",
     "lootTable": [
-      { "itemId": "rubicite_breastplate", "dropChance": 0.3 }
+      {
+        "itemId": "rubicite_breastplate",
+        "dropChance": 0.3
+      }
     ],
     "faction": "plane_of_fear",
     "isUndead": false,
@@ -702,7 +960,10 @@
     "goldReward": 70,
     "spriteClass": "monster-iksar_brigand",
     "lootTable": [
-      { "itemId": "dragon_scales", "dropChance": 0.2 }
+      {
+        "itemId": "dragon_scales",
+        "dropChance": 0.2
+      }
     ],
     "faction": "ring_of_scale",
     "isUndead": false,
@@ -721,7 +982,10 @@
     "goldReward": 130,
     "spriteClass": "monster-iksar_warrior",
     "lootTable": [
-      { "itemId": "dragon_scales", "dropChance": 0.35 }
+      {
+        "itemId": "dragon_scales",
+        "dropChance": 0.35
+      }
     ],
     "faction": "ring_of_scale",
     "isUndead": false,
@@ -740,17 +1004,31 @@
     "goldReward": 3000,
     "spriteClass": "monster-venril_sathir",
     "lootTable": [
-      { "itemId": "dragon_scales", "dropChance": 1.0 },
-      { "itemId": "rubicite_breastplate", "dropChance": 0.5 },
-      { "itemId": "manastone", "dropChance": 0.3 },
-      { "itemId": "fbss", "dropChance": 0.15 }
+      {
+        "itemId": "dragon_scales",
+        "dropChance": 1.0
+      },
+      {
+        "itemId": "rubicite_breastplate",
+        "dropChance": 0.5
+      },
+      {
+        "itemId": "manastone",
+        "dropChance": 0.3
+      },
+      {
+        "itemId": "fbss",
+        "dropChance": 0.15
+      }
     ],
     "faction": "ring_of_scale",
     "isUndead": true,
     "isSocial": false,
     "isAnimal": false,
     "isBoss": true,
-    "isRaidBoss": true
+    "isRaidBoss": true,
+    "ac": 400,
+    "atk": 450
   },
   {
     "id": "hill_snake",
@@ -764,7 +1042,10 @@
     "goldReward": 0,
     "spriteClass": "monster-placeholder",
     "lootTable": [
-      { "itemId": "snake_scales", "dropChance": 0.5 }
+      {
+        "itemId": "snake_scales",
+        "dropChance": 0.5
+      }
     ],
     "faction": "none",
     "isUndead": false,
@@ -783,7 +1064,10 @@
     "goldReward": 0,
     "spriteClass": "monster-placeholder",
     "lootTable": [
-      { "itemId": "wolf_fur", "dropChance": 0.5 }
+      {
+        "itemId": "wolf_fur",
+        "dropChance": 0.5
+      }
     ],
     "faction": "none",
     "isUndead": false,
@@ -802,8 +1086,14 @@
     "goldReward": 3,
     "spriteClass": "monster-placeholder",
     "lootTable": [
-      { "itemId": "rusty_dagger", "dropChance": 0.2 },
-      { "itemId": "leather_cord", "dropChance": 0.3 }
+      {
+        "itemId": "rusty_dagger",
+        "dropChance": 0.2
+      },
+      {
+        "itemId": "leather_cord",
+        "dropChance": 0.3
+      }
     ],
     "faction": "corrupt_qeynos_guards",
     "isUndead": false,
@@ -822,8 +1112,14 @@
     "goldReward": 5,
     "spriteClass": "monster-placeholder",
     "lootTable": [
-      { "itemId": "orc_fang", "dropChance": 0.5 },
-      { "itemId": "rusty_axe", "dropChance": 0.2 }
+      {
+        "itemId": "orc_fang",
+        "dropChance": 0.5
+      },
+      {
+        "itemId": "rusty_axe",
+        "dropChance": 0.2
+      }
     ],
     "faction": "crushbone_orcs",
     "isUndead": false,
@@ -842,8 +1138,14 @@
     "goldReward": 12,
     "spriteClass": "monster-placeholder",
     "lootTable": [
-      { "itemId": "bone_chips", "dropChance": 0.6 },
-      { "itemId": "bat_wing", "dropChance": 0.4 }
+      {
+        "itemId": "bone_chips",
+        "dropChance": 0.6
+      },
+      {
+        "itemId": "bat_wing",
+        "dropChance": 0.4
+      }
     ],
     "faction": "heretics",
     "isUndead": false,
@@ -862,8 +1164,14 @@
     "goldReward": 30,
     "spriteClass": "monster-placeholder",
     "lootTable": [
-      { "itemId": "giant_warrior_helm", "dropChance": 0.1 },
-      { "itemId": "wolf_fur", "dropChance": 0.4 }
+      {
+        "itemId": "giant_warrior_helm",
+        "dropChance": 0.1
+      },
+      {
+        "itemId": "wolf_fur",
+        "dropChance": 0.4
+      }
     ],
     "faction": "none",
     "isUndead": false,
@@ -882,7 +1190,10 @@
     "goldReward": 10,
     "spriteClass": "monster-placeholder",
     "lootTable": [
-      { "itemId": "fire_goblin_skin", "dropChance": 0.6 }
+      {
+        "itemId": "fire_goblin_skin",
+        "dropChance": 0.6
+      }
     ],
     "faction": "runnyeye_goblins",
     "isUndead": false,
@@ -901,7 +1212,10 @@
     "goldReward": 25,
     "spriteClass": "monster-placeholder",
     "lootTable": [
-      { "itemId": "magma_shard", "dropChance": 0.4 }
+      {
+        "itemId": "magma_shard",
+        "dropChance": 0.4
+      }
     ],
     "faction": "none",
     "isUndead": false,
@@ -920,8 +1234,14 @@
     "goldReward": 400,
     "spriteClass": "monster-placeholder",
     "lootTable": [
-      { "itemId": "magma_shard", "dropChance": 1.0 },
-      { "itemId": "rubicite_breastplate", "dropChance": 0.1 }
+      {
+        "itemId": "magma_shard",
+        "dropChance": 1.0
+      },
+      {
+        "itemId": "rubicite_breastplate",
+        "dropChance": 0.1
+      }
     ],
     "faction": "none",
     "isUndead": false,
@@ -941,7 +1261,10 @@
     "goldReward": 200,
     "spriteClass": "monster-placeholder",
     "lootTable": [
-      { "itemId": "bat_wing", "dropChance": 0.5 }
+      {
+        "itemId": "bat_wing",
+        "dropChance": 0.5
+      }
     ],
     "faction": "heretics",
     "isUndead": false,
@@ -960,7 +1283,10 @@
     "goldReward": 1400,
     "spriteClass": "monster-placeholder",
     "lootTable": [
-      { "itemId": "rubicite_breastplate", "dropChance": 0.3 }
+      {
+        "itemId": "rubicite_breastplate",
+        "dropChance": 0.3
+      }
     ],
     "faction": "heretics",
     "isUndead": false,
@@ -981,8 +1307,14 @@
     "goldReward": 350,
     "spriteClass": "monster-placeholder",
     "lootTable": [
-      { "itemId": "bat_wing", "dropChance": 0.6 },
-      { "itemId": "robe_of_the_oracle", "dropChance": 0.05 }
+      {
+        "itemId": "bat_wing",
+        "dropChance": 0.6
+      },
+      {
+        "itemId": "robe_of_the_oracle",
+        "dropChance": 0.05
+      }
     ],
     "faction": "heretics",
     "isUndead": false,
@@ -1001,7 +1333,10 @@
     "goldReward": 250,
     "spriteClass": "monster-placeholder",
     "lootTable": [
-      { "itemId": "giant_warrior_helm", "dropChance": 0.15 }
+      {
+        "itemId": "giant_warrior_helm",
+        "dropChance": 0.15
+      }
     ],
     "faction": "kromzek",
     "isUndead": false,
@@ -1020,7 +1355,10 @@
     "goldReward": 100,
     "spriteClass": "monster-placeholder",
     "lootTable": [
-      { "itemId": "velium_ore", "dropChance": 0.5 }
+      {
+        "itemId": "velium_ore",
+        "dropChance": 0.5
+      }
     ],
     "faction": "coldain",
     "isUndead": false,
@@ -1039,8 +1377,14 @@
     "goldReward": 500,
     "spriteClass": "monster-placeholder",
     "lootTable": [
-      { "itemId": "giant_warrior_helm", "dropChance": 0.2 },
-      { "itemId": "velium_ore", "dropChance": 0.4 }
+      {
+        "itemId": "giant_warrior_helm",
+        "dropChance": 0.2
+      },
+      {
+        "itemId": "velium_ore",
+        "dropChance": 0.4
+      }
     ],
     "faction": "kromrif",
     "isUndead": false,
@@ -1059,7 +1403,10 @@
     "goldReward": 800,
     "spriteClass": "monster-placeholder",
     "lootTable": [
-      { "itemId": "dragon_scales", "dropChance": 0.5 }
+      {
+        "itemId": "dragon_scales",
+        "dropChance": 0.5
+      }
     ],
     "faction": "claws_of_veeshan",
     "isUndead": false,
@@ -1078,8 +1425,14 @@
     "goldReward": 1200,
     "spriteClass": "monster-placeholder",
     "lootTable": [
-      { "itemId": "dragon_scales", "dropChance": 0.6 },
-      { "itemId": "velium_ore", "dropChance": 0.7 }
+      {
+        "itemId": "dragon_scales",
+        "dropChance": 0.6
+      },
+      {
+        "itemId": "velium_ore",
+        "dropChance": 0.7
+      }
     ],
     "faction": "claws_of_veeshan",
     "isUndead": false,
@@ -1098,10 +1451,22 @@
     "goldReward": 50000,
     "spriteClass": "monster-placeholder",
     "lootTable": [
-      { "itemId": "dragon_scales", "dropChance": 1.0 },
-      { "itemId": "manastone", "dropChance": 0.5 },
-      { "itemId": "fbss", "dropChance": 0.5 },
-      { "itemId": "fungi_tunic", "dropChance": 0.5 }
+      {
+        "itemId": "dragon_scales",
+        "dropChance": 1.0
+      },
+      {
+        "itemId": "manastone",
+        "dropChance": 0.5
+      },
+      {
+        "itemId": "fbss",
+        "dropChance": 0.5
+      },
+      {
+        "itemId": "fungi_tunic",
+        "dropChance": 0.5
+      }
     ],
     "faction": "claws_of_veeshan",
     "isUndead": false,
