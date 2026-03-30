@@ -643,3 +643,207 @@ textarea.export-box {
 .recipe-name { color: var(--text); flex: 1; }
 .recipe-trivial { color: var(--muted); min-width: 80px; }
 .recipe-chance { min-width: 60px; text-align: right; }
+
+/* ============================================================
+   MONSTER SPRITES
+   ============================================================ */
+
+/* Placeholder — dark grey box with a centred "?" for monsters without a sprite */
+.monster-placeholder {
+  width: 120px;
+  height: 120px;
+  background: #1a1a2e;
+  border: 2px solid #333;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: #555;
+  font-family: 'Cinzel', serif;
+}
+
+.monster-placeholder::after {
+  content: '?';
+}
+
+/* --- gnolls.png (1 row x 3 cols) --- */
+.monster-gnoll_pup,
+.monster-gnoll_guard,
+.monster-fippy_darkpaw {
+  width: 120px; height: 120px;
+  background-image: url('../assets/monsters/gnolls.png');
+  background-size: 360px 120px;
+  image-rendering: pixelated;
+  background-repeat: no-repeat;
+}
+.monster-gnoll_pup     { background-position: 0px 0px; }
+.monster-gnoll_guard   { background-position: -120px 0px; }
+.monster-fippy_darkpaw { background-position: -240px 0px; }
+
+/* --- crushbone_orcs.png (3 rows x 3 cols) --- */
+.monster-orc_pawn,
+.monster-orc_legionnaire,
+.monster-orc_warlord,
+.monster-orc_centurion,
+.monster-orc_centurion_elite,
+.monster-orc_legionmaster,
+.monster-emperor_crushbone_w,
+.monster-emperor_crushbone_m,
+.monster-emperor_crushbone {
+  width: 120px; height: 120px;
+  background-image: url('../assets/monsters/crushbone_orcs.png');
+  background-size: 360px 360px;
+  image-rendering: pixelated;
+  background-repeat: no-repeat;
+}
+/* Row 0 — Orc Pawn */
+.monster-orc_pawn            { background-position: 0px 0px; }
+.monster-orc_legionnaire     { background-position: -120px 0px; }
+.monster-orc_warlord         { background-position: -240px 0px; }
+/* Row 1 — Orc Centurion */
+.monster-orc_centurion       { background-position: 0px -120px; }
+.monster-orc_centurion_elite { background-position: -120px -120px; }
+.monster-orc_legionmaster    { background-position: -240px -120px; }
+/* Row 2 — Emperor Crushbone */
+.monster-emperor_crushbone_w { background-position: 0px -240px; }
+.monster-emperor_crushbone_m { background-position: -120px -240px; }
+.monster-emperor_crushbone   { background-position: -240px -240px; }
+
+/* --- befallen_undead.png (3 rows x 3 cols) --- */
+.monster-decaying_skeleton,
+.monster-rotting_skeleton,
+.monster-ancient_skeleton,
+.monster-skeleton,
+.monster-skeleton_warrior,
+.monster-skeleton_knight,
+.monster-verix_kylox_w,
+.monster-verix_kylox_m,
+.monster-verix_kylox {
+  width: 120px; height: 120px;
+  background-image: url('../assets/monsters/befallen_undead.png');
+  background-size: 360px 360px;
+  image-rendering: pixelated;
+  background-repeat: no-repeat;
+}
+/* Column 0 — Decaying Skeleton */
+.monster-decaying_skeleton { background-position: 0px 0px; }
+.monster-rotting_skeleton  { background-position: 0px -120px; }
+.monster-ancient_skeleton  { background-position: 0px -240px; }
+/* Column 1 — Skeleton */
+.monster-skeleton          { background-position: -120px 0px; }
+.monster-skeleton_warrior  { background-position: -120px -120px; }
+.monster-skeleton_knight   { background-position: -120px -240px; }
+/* Column 2 — Verix Kylox */
+.monster-verix_kylox_w     { background-position: -240px 0px; }
+.monster-verix_kylox_m     { background-position: -240px -120px; }
+.monster-verix_kylox       { background-position: -240px -240px; }
+
+/* --- multi_zone_sheet.png (4 rows x 3 cols) --- */
+.monster-hatchling,
+.monster-wyrmling,
+.monster-lord_nagafen,
+.monster-ghoul,
+.monster-revenant,
+.monster-maestro_of_rancor,
+.monster-spider,
+.monster-giant_spider,
+.monster-mistress_of_scorn,
+.monster-iksar_brigand,
+.monster-iksar_warrior,
+.monster-venril_sathir {
+  width: 120px; height: 120px;
+  background-image: url('../assets/monsters/multi_zone_sheet.png');
+  background-size: 360px 480px;
+  image-rendering: pixelated;
+  background-repeat: no-repeat;
+}
+/* Row 0 — Dragons (Nagafen's Lair) */
+.monster-hatchling         { background-position: 0px 0px; }
+.monster-wyrmling          { background-position: -120px 0px; }
+.monster-lord_nagafen      { background-position: -240px 0px; }
+/* Row 1 — Lower Guk Undead */
+.monster-ghoul             { background-position: 0px -120px; }
+.monster-revenant          { background-position: -120px -120px; }
+.monster-maestro_of_rancor { background-position: -240px -120px; }
+/* Row 2 — Plane of Fear Spiders */
+.monster-spider            { background-position: 0px -240px; }
+.monster-giant_spider      { background-position: -120px -240px; }
+.monster-mistress_of_scorn { background-position: -240px -240px; }
+/* Row 3 — Karnor's Castle (Kunark) */
+.monster-iksar_brigand     { background-position: 0px -360px; }
+.monster-iksar_warrior     { background-position: -120px -360px; }
+.monster-venril_sathir     { background-position: -240px -360px; }
+
+/* Boss monsters on multi_zone_sheet display larger */
+.monster-lord_nagafen,
+.monster-venril_sathir,
+.monster-maestro_of_rancor,
+.monster-mistress_of_scorn {
+  width: 160px;
+  height: 160px;
+  background-size: 480px 640px;
+}
+
+/* --- velious_giants.png (1 row x 3 cols) --- */
+.monster-frost_giant,
+.monster-kromrif_warrior,
+.monster-king_tormax {
+  width: 120px; height: 120px;
+  background-image: url('../assets/monsters/velious_giants.png');
+  background-size: 360px 120px;
+  image-rendering: pixelated;
+  background-repeat: no-repeat;
+}
+.monster-frost_giant     { background-position: 0px 0px; }
+.monster-kromrif_warrior { background-position: -120px 0px; }
+.monster-king_tormax     { background-position: -240px 0px; }
+
+/* King Tormax is a raid boss — display larger */
+.monster-king_tormax {
+  width: 160px;
+  height: 160px;
+  background-size: 480px 160px;
+}
+
+/* --- plane_of_hate.png (1 row x 3 cols) --- */
+.monster-innoruuk_priest,
+.monster-magi_of_hate,
+.monster-innoruuk {
+  width: 120px; height: 120px;
+  background-image: url('../assets/monsters/plane_of_hate.png');
+  background-size: 360px 120px;
+  image-rendering: pixelated;
+  background-repeat: no-repeat;
+}
+.monster-innoruuk_priest { background-position: 0px 0px; }
+.monster-magi_of_hate    { background-position: -120px 0px; }
+.monster-innoruuk        { background-position: -240px 0px; }
+
+/* Innoruuk is THE god — massive display */
+.monster-innoruuk {
+  width: 180px;
+  height: 180px;
+  background-size: 540px 180px;
+}
+
+/* --- frogloks.png (1 row x 3 cols) --- */
+.monster-froglok_gaz,
+.monster-froglok_knight,
+.monster-trakanon {
+  width: 120px; height: 120px;
+  background-image: url('../assets/monsters/frogloks.png');
+  background-size: 360px 120px;
+  image-rendering: pixelated;
+  background-repeat: no-repeat;
+}
+.monster-froglok_gaz    { background-position: 0px 0px; }
+.monster-froglok_knight { background-position: -120px 0px; }
+.monster-trakanon       { background-position: -240px 0px; }
+
+/* Trakanon is a raid dragon — display larger */
+.monster-trakanon {
+  width: 180px;
+  height: 180px;
+  background-size: 540px 180px;
+}
