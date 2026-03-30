@@ -1,0 +1,2 @@
+# EQIDLE
+Everquest Idle
