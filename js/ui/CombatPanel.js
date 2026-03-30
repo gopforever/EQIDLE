@@ -37,6 +37,20 @@ export class CombatPanel {
     });
     this.eventBus.on('ghost_chat', (data) => this._appendChat(data));
     this.eventBus.on('group_available', (data) => this._showGroupInvite(data));
+    this.eventBus.on('phase_shift', (data) => {
+      const spriteEl = document.querySelector('#enemy-display .monster-sprite');
+      if (spriteEl) {
+        // Remove all monster- classes
+        spriteEl.className = spriteEl.className
+          .split(' ')
+          .filter(c => !c.startsWith('monster-'))
+          .join(' ');
+        spriteEl.classList.add('monster-sprite', data.newSprite);
+        // Add a shake/flash animation
+        spriteEl.classList.add('phase-shift-flash');
+        setTimeout(() => spriteEl.classList.remove('phase-shift-flash'), 800);
+      }
+    });
   }
 
   render() {

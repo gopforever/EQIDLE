@@ -48,6 +48,7 @@ export class CombatSystem {
       ...monster,
       currentHp: monster.hp
     };
+    state.combat.currentSpriteClass = monster.spriteClass;
     this.dotTimers = [];
     this.autoAttackTick = 0;
     this.eventBus.emit('combat_start', { enemy: state.combat.currentEnemy });
@@ -83,8 +84,40 @@ export class CombatSystem {
     enemy.currentHp = Math.max(0, enemy.currentHp - damage);
     this.eventBus.emit('damage', { source: 'player', damage, enemyHp: enemy.currentHp });
 
+    this.checkPhaseShift(enemy, enemy.currentHp);
+
     if (enemy.currentHp <= 0) {
       this.onKill();
+    }
+  }
+
+  checkPhaseShift(monster, currentHp) {
+    if (!monster.phaseSprites || !monster.phaseShift) return;
+    const hpPercent = currentHp / monster.hp;
+    let newPhaseSprite = monster.spriteClass;
+    for (const phase of monster.phaseSprites) {
+      if (hpPercent <= phase.hpThreshold) {
+        newPhaseSprite = phase.spriteClass;
+      }
+    }
+    if (newPhaseSprite !== this.gameState.combat.currentSpriteClass) {
+      this.gameState.combat.currentSpriteClass = newPhaseSprite;
+      this.eventBus.emit('phase_shift', {
+        monsterId: monster.id,
+        newSprite: newPhaseSprite,
+        hpPercent
+      });
+      // Show dramatic notification on phase shift
+      if (monster.id === 'kerafyrm') {
+        const messages = {
+          'monster-kerafyrm_enraged': '⚡ KERAFYRM AWAKENS FULLY — HIS WRATH IS UNLEASHED!',
+          'monster-kerafyrm': '🐉 THE SLEEPER ASCENDS TO FULL POWER — ALL IS LOST!'
+        };
+        this.eventBus.emit('notification', {
+          message: messages[newPhaseSprite] || `${monster.name} has entered a new phase!`,
+          type: 'death'
+        });
+      }
     }
   }
 

@@ -847,3 +847,103 @@ textarea.export-box {
   height: 180px;
   background-size: 540px 180px;
 }
+
+/* --- kerafyrm.png (1 row x 3 cols) --- */
+.monster-kerafyrm_awakening,
+.monster-kerafyrm_enraged,
+.monster-kerafyrm {
+  width: 140px; height: 140px;
+  background-image: url('../assets/monsters/kerafyrm.png');
+  background-size: 420px 140px;
+  image-rendering: pixelated;
+  background-repeat: no-repeat;
+}
+.monster-kerafyrm_awakening { background-position: 0px 0px; }
+.monster-kerafyrm_enraged   { background-position: -140px 0px; }
+.monster-kerafyrm           { background-position: -280px 0px; }
+/* THE SLEEPER — largest sprite in the game */
+.monster-kerafyrm {
+  width: 220px;
+  height: 220px;
+  background-size: 660px 220px;
+}
+
+/* --- planes_classic.png (1 row x 3 cols) --- */
+.monster-terror,
+.monster-dread,
+.monster-cazic_thule {
+  width: 120px; height: 120px;
+  background-image: url('../assets/monsters/planes_classic.png');
+  background-size: 360px 120px;
+  image-rendering: pixelated;
+  background-repeat: no-repeat;
+}
+.monster-terror      { background-position: 0px 0px; }
+.monster-dread       { background-position: -120px 0px; }
+.monster-cazic_thule { background-position: -240px 0px; }
+.monster-cazic_thule {
+  width: 180px; height: 180px;
+  background-size: 540px 180px;
+}
+
+/* --- qeynos_newbie.png (1 row x 3 cols) --- */
+.monster-hill_snake,
+.monster-wolf_pup,
+.monster-bandit {
+  width: 120px; height: 120px;
+  background-image: url('../assets/monsters/qeynos_newbie.png');
+  background-size: 360px 120px;
+  image-rendering: pixelated;
+  background-repeat: no-repeat;
+}
+.monster-hill_snake { background-position: 0px 0px; }
+.monster-wolf_pup   { background-position: -120px 0px; }
+.monster-bandit     { background-position: -240px 0px; }
+
+/* --- sleepers_tomb.png (1 row x 3 cols) --- */
+.monster-primal_velium_warrior,
+.monster-guardian_of_tomb,
+.monster-zlandicar {
+  width: 120px; height: 120px;
+  background-image: url('../assets/monsters/sleepers_tomb.png');
+  background-size: 360px 120px;
+  image-rendering: pixelated;
+  background-repeat: no-repeat;
+}
+.monster-primal_velium_warrior { background-position: 0px 0px; }
+.monster-guardian_of_tomb      { background-position: -120px 0px; }
+.monster-zlandicar             { background-position: -240px 0px; }
+.monster-zlandicar {
+  width: 160px; height: 160px;
+  background-size: 480px 160px;
+}
+
+/* --- unrest.png (1 row x 3 cols) --- */
+.monster-unrest_ghoul,
+.monster-spectre,
+.monster-garanel_rucksif {
+  width: 120px; height: 120px;
+  background-image: url('../assets/monsters/unrest.png');
+  background-size: 360px 120px;
+  image-rendering: pixelated;
+  background-repeat: no-repeat;
+}
+.monster-unrest_ghoul    { background-position: 0px 0px; }
+.monster-spectre         { background-position: -120px 0px; }
+.monster-garanel_rucksif { background-position: -240px 0px; }
+.monster-garanel_rucksif {
+  width: 160px; height: 160px;
+  background-size: 480px 160px;
+}
+
+/* --- Phase-shift flash animation (Kerafyrm) --- */
+@keyframes phaseShiftFlash {
+  0%   { filter: brightness(3) saturate(0); transform: scale(1.1); }
+  25%  { filter: brightness(1) saturate(2); transform: scale(0.95); }
+  50%  { filter: brightness(2) saturate(0); transform: scale(1.05); }
+  75%  { filter: brightness(1) saturate(2); transform: scale(1); }
+  100% { filter: brightness(1) saturate(1); transform: scale(1); }
+}
+.phase-shift-flash {
+  animation: phaseShiftFlash 0.8s ease-in-out;
+}
