@@ -1,0 +1,342 @@
+[
+  {
+    "id": "qeynos_hills",
+    "name": "Qeynos Hills",
+    "description": "Rolling green hills surrounding the city of Qeynos, home to wolves and gnolls. A common hunting ground for new adventurers.",
+    "expansion": "Classic",
+    "levelRange": [1, 10],
+    "factionRequired": null,
+    "monsters": ["wolf_pup", "plains_wolf", "gnoll_pup", "gnoll_scout", "rabid_wolf", "young_bear"],
+    "boss": {
+      "id": "harry_the_gnoll",
+      "name": "Harry the Gnoll",
+      "spawnChance": 0.05,
+      "loot": ["gnoll_fang", "tattered_cloak", "silver_coin_pouch"],
+      "respawnTicks": 100
+    },
+    "resources": ["wolf_pelt", "bone_chips", "wild_berries"]
+  },
+  {
+    "id": "east_commonlands",
+    "name": "East Commonlands",
+    "description": "A major crossroads of Norrath stretching between Freeport and the Karanas. Bandits and orcs prowl the roads, while dark elves lurk near the tunnel.",
+    "expansion": "Classic",
+    "levelRange": [5, 20],
+    "factionRequired": null,
+    "monsters": ["orc_pawn", "orc_legionnaire", "dark_elf_bandit", "skeleton", "zombie", "hill_giant_scout"],
+    "boss": {
+      "id": "lord_vox",
+      "name": "Lord Vox the Bandit",
+      "spawnChance": 0.04,
+      "loot": ["bandit_sash", "rusty_long_sword", "gold_coin_pouch"],
+      "respawnTicks": 120
+    },
+    "resources": ["bat_wing", "fire_beetle_leg", "spiderling_silk"]
+  },
+  {
+    "id": "misty_thicket",
+    "name": "Misty Thicket",
+    "description": "A dense forest zone on the border of Rivervale, homeland of the halflings. Filled with wildlife and goblin raiders.",
+    "expansion": "Classic",
+    "levelRange": [1, 15],
+    "factionRequired": null,
+    "monsters": ["young_kodiak", "misty_kodiak", "goblin_scout", "goblin_raider", "decaying_skeleton", "large_spider"],
+    "boss": {
+      "id": "runnyeye_chief",
+      "name": "Runnyeye Chief",
+      "spawnChance": 0.04,
+      "loot": ["goblin_ear", "crude_chieftain_mask", "small_bag_of_coins"],
+      "respawnTicks": 110
+    },
+    "resources": ["spiderling_silk", "goblin_ear", "mushroom_spores"]
+  },
+  {
+    "id": "crushbone",
+    "name": "Crushbone",
+    "description": "The fortress stronghold of the Crushbone orcish empire in Faydwer. A popular dungeon teeming with orcs of all ranks led by Emperor Crushbone himself.",
+    "expansion": "Classic",
+    "levelRange": [8, 25],
+    "factionRequired": null,
+    "monsters": ["orc_pawn", "orc_legionnaire", "orc_centurion", "orc_slayer", "orc_trainer", "orc_warlord"],
+    "boss": {
+      "id": "emperor_crushbone",
+      "name": "Emperor Crushbone",
+      "spawnChance": 0.02,
+      "loot": ["crushbone_belt", "imperial_warhelm", "crushbone_centurion_helm"],
+      "respawnTicks": 200
+    },
+    "resources": ["orc_fang", "bone_chips", "crushbone_pelt"]
+  },
+  {
+    "id": "blackburrow",
+    "name": "Blackburrow",
+    "description": "A vast underground gnoll lair beneath the forests near Qeynos. Multiple levels of gnoll society await adventurers seeking their ale and equipment.",
+    "expansion": "Classic",
+    "levelRange": [5, 20],
+    "factionRequired": null,
+    "monsters": ["gnoll_pup", "gnoll_scout", "gnoll_fighter", "gnoll_priest", "gnoll_shaman", "gnoll_commander"],
+    "boss": {
+      "id": "belsniklus",
+      "name": "Belsniklus the Gnoll",
+      "spawnChance": 0.03,
+      "loot": ["gnoll_fur_patch", "blackburrow_stout", "gnoll_fang_necklace"],
+      "respawnTicks": 150
+    },
+    "resources": ["bone_chips", "gnoll_fang", "blackburrow_stout"]
+  },
+  {
+    "id": "unrest",
+    "name": "Estate of Unrest",
+    "description": "A haunted mansion on the island of Faydwer overrun with undead creatures. The spirits of the restless dead make this a dangerous but rewarding dungeon.",
+    "expansion": "Classic",
+    "levelRange": [15, 35],
+    "factionRequired": null,
+    "monsters": ["decaying_skeleton", "rotting_corpse", "haunted_armor", "ghoul", "banshee", "undead_knight"],
+    "boss": {
+      "id": "garanel_rucksif",
+      "name": "Garanel Rucksif",
+      "spawnChance": 0.03,
+      "loot": ["garanel_tunic", "dark_ember", "soul_crystal"],
+      "respawnTicks": 180
+    },
+    "resources": ["bone_chips", "zombie_flesh", "bat_wing"]
+  },
+  {
+    "id": "befallen",
+    "name": "Befallen",
+    "description": "An ancient, long-abandoned tower in West Karana that has become the domain of the Bloodsabers cult. Filled with undead and cultist necromancers.",
+    "expansion": "Classic",
+    "levelRange": [10, 30],
+    "factionRequired": null,
+    "monsters": ["decaying_skeleton", "zombie", "ghoul", "bloodsaber_acolyte", "bloodsaber_necromancer", "shadowed_man"],
+    "boss": {
+      "id": "lord_shin_ree",
+      "name": "Lord Shin Ree",
+      "spawnChance": 0.03,
+      "loot": ["shins_staff", "robe_of_decay", "skull_amulet"],
+      "respawnTicks": 160
+    },
+    "resources": ["bone_chips", "zombie_skin", "bat_wing"]
+  },
+  {
+    "id": "solusek_eye",
+    "name": "Solusek's Eye",
+    "description": "A volcanic cavern system beneath the Lavastorm Mountains, home to fire goblins and elementals. The intense heat makes survival a challenge in itself.",
+    "expansion": "Classic",
+    "levelRange": [20, 40],
+    "factionRequired": null,
+    "monsters": ["fire_goblin", "lava_elemental", "fire_elemental", "magma_golem", "volcanic_sprite", "solusek_goblin_shaman"],
+    "boss": {
+      "id": "king_miragul",
+      "name": "King Miragul",
+      "spawnChance": 0.03,
+      "loot": ["miragul_robe", "staff_of_temperate_flux", "lava_gem"],
+      "respawnTicks": 200
+    },
+    "resources": ["fire_beetle_leg", "goblin_ear", "lava_rock"]
+  },
+  {
+    "id": "nagafens_lair",
+    "name": "Nagafen's Lair",
+    "description": "The lair of the great dragon Lord Nagafen deep in the Lavastorm Mountains. One of the most dangerous zones in classic EverQuest, requiring a full raid force.",
+    "expansion": "Classic",
+    "levelRange": [40, 50],
+    "factionRequired": null,
+    "monsters": ["lava_elemental", "kobold_warrior", "kobold_shaman", "fire_sprite", "salamander", "goblin_warrior"],
+    "boss": {
+      "id": "lord_nagafen",
+      "name": "Lord Nagafen",
+      "spawnChance": 0.01,
+      "loot": ["nagafen_scale", "words_of_collection_north", "jade_reaver", "nagafen_hoard_chest"],
+      "respawnTicks": 500
+    },
+    "resources": ["fire_opal", "dragon_scale", "kobold_fang"]
+  },
+  {
+    "id": "lower_guk",
+    "name": "Lower Guk",
+    "description": "The lower levels of the ancient froglok ruins of Guk, now overrun by undead frogloks. Home to some of the most sought-after items in classic EverQuest.",
+    "expansion": "Classic",
+    "levelRange": [35, 50],
+    "factionRequired": null,
+    "monsters": ["froglok_knight", "froglok_pickpocket", "froglok_shaman", "undead_froglok", "froglok_ghoul", "froglok_wizard"],
+    "boss": {
+      "id": "ghoul_lord",
+      "name": "Ghoul Lord",
+      "spawnChance": 0.02,
+      "loot": ["ghoul_lord_robe", "flowing_black_silk_sash", "journeymans_boots"],
+      "respawnTicks": 300
+    },
+    "resources": ["bone_chips", "froglok_leg", "guk_mushroom"]
+  },
+  {
+    "id": "plane_of_fear",
+    "name": "Plane of Fear",
+    "description": "The realm of the god of Fear, Cazic-Thule. A terrifying plane filled with undead and aberrations. One of the original raid planes requiring a full guild.",
+    "expansion": "Classic",
+    "levelRange": [46, 55],
+    "factionRequired": null,
+    "monsters": ["amygdalan_warrior", "amygdalan_tentacle_terror", "shiverback", "undead_bard", "undead_knight", "tentacle_terror"],
+    "boss": {
+      "id": "cazic_thule",
+      "name": "Cazic-Thule",
+      "spawnChance": 0.01,
+      "loot": ["rubicite_breastplate", "manastone", "cazic_thule_robe", "shining_metallic_robes"],
+      "respawnTicks": 600
+    },
+    "resources": ["fear_flesh", "amygdalan_arm", "soul_essence"]
+  },
+  {
+    "id": "plane_of_hate",
+    "name": "Plane of Hate",
+    "description": "The domain of Innoruuk, Prince of Hate. A gothic horror realm filled with powerful undead and demonic creatures. Requires a substantial raid force.",
+    "expansion": "Classic",
+    "levelRange": [46, 55],
+    "factionRequired": "heretics",
+    "monsters": ["innoruuk_servant", "mistmoore_vampire", "hate_minion", "fallen_hero", "spectral_knight", "dread_gargoyle"],
+    "boss": {
+      "id": "innoruuk",
+      "name": "Innoruuk",
+      "spawnChance": 0.01,
+      "loot": ["innoruuk_heart", "hate_plate_armor", "dark_shroud", "incandescent_lantern"],
+      "respawnTicks": 600
+    },
+    "resources": ["hate_essence", "dark_ember", "infernal_dust"]
+  },
+  {
+    "id": "field_of_bone",
+    "name": "Field of Bone",
+    "description": "A vast wasteland in Kunark littered with the bones of ancient creatures. Skeleton warriors and giant skeletons roam this bleached landscape.",
+    "expansion": "Kunark",
+    "levelRange": [1, 20],
+    "factionRequired": null,
+    "monsters": ["skeleton_warrior", "giant_skeleton", "iksar_bandit", "sarnak_courier", "patchwork_skeleton", "rotting_skeleton"],
+    "boss": {
+      "id": "kly_overlord",
+      "name": "Kly Overlord",
+      "spawnChance": 0.03,
+      "loot": ["bone_halberd", "skull_cap", "iksar_scale"],
+      "respawnTicks": 150
+    },
+    "resources": ["bone_chips", "iksar_scale", "fossil_bone"]
+  },
+  {
+    "id": "frontier_mountains",
+    "name": "Frontier Mountains",
+    "description": "Rugged mountainous terrain in Kunark home to giant clans and goblin tribes. The ancient giant fortress looms over the landscape.",
+    "expansion": "Kunark",
+    "levelRange": [30, 50],
+    "factionRequired": null,
+    "monsters": ["mountain_giant", "goblin_warrior", "goblin_shaman", "giant_warrior", "sarnak_berserker", "lava_giant"],
+    "boss": {
+      "id": "chief_stonefoot",
+      "name": "Chief Stonefoot",
+      "spawnChance": 0.02,
+      "loot": ["giant_skin_boots", "stonefoot_club", "frontier_gem"],
+      "respawnTicks": 200
+    },
+    "resources": ["giant_skin", "goblin_ear", "mountain_ore"]
+  },
+  {
+    "id": "karnors_castle",
+    "name": "Karnor's Castle",
+    "description": "An ancient iksar fortress in Kunark, now overrun by drolvarg werewolves. A challenging dungeon for experienced adventurers seeking Sebilis key pieces.",
+    "expansion": "Kunark",
+    "levelRange": [40, 55],
+    "factionRequired": null,
+    "monsters": ["drolvarg_warlord", "drolvarg_captain", "drolvarg_pup", "iksar_skeleton", "drolvarg_snarler", "frenzied_pup"],
+    "boss": {
+      "id": "venril_sathir",
+      "name": "Venril Sathir",
+      "spawnChance": 0.01,
+      "loot": ["venril_sathir_remains", "sathirs_totem", "kunark_ancient_armor"],
+      "respawnTicks": 400
+    },
+    "resources": ["drolvarg_paw", "wolf_fang", "old_bone"]
+  },
+  {
+    "id": "veeshan_peak",
+    "name": "Veeshan's Peak",
+    "description": "The home of the Ring of Scale and some of the most powerful dragons in Norrath. Only the most powerful raiders dare enter this Kunark raid zone.",
+    "expansion": "Kunark",
+    "levelRange": [50, 60],
+    "factionRequired": "ring_of_scale",
+    "monsters": ["elder_dragon", "ring_of_scale_knight", "drachnid_silk_weaver", "skyfire_golem", "wyrm_guard", "ancient_wyvern"],
+    "boss": {
+      "id": "nexona",
+      "name": "Nexona",
+      "spawnChance": 0.01,
+      "loot": ["nexona_scale", "veeshan_peak_relic", "ancient_dragon_sword", "dragon_blood_shard"],
+      "respawnTicks": 600
+    },
+    "resources": ["dragon_scale", "dragon_bone", "ring_of_scale_emblem"]
+  },
+  {
+    "id": "great_divide",
+    "name": "Great Divide",
+    "description": "A massive frozen wasteland in Velious, home to the Coldain dwarves and giant clans warring for control of the icy terrain.",
+    "expansion": "Velious",
+    "levelRange": [40, 55],
+    "factionRequired": null,
+    "monsters": ["snow_giant", "coldain_miner", "kromzek_scout", "dire_wolf", "woolly_mammoth", "arctic_bear"],
+    "boss": {
+      "id": "icebone_golem",
+      "name": "Icebone Golem",
+      "spawnChance": 0.03,
+      "loot": ["icerend_claw", "frozen_gem", "coldain_insignia_ring"],
+      "respawnTicks": 200
+    },
+    "resources": ["wolf_pelt", "bear_pelt", "coldain_mining_pick"]
+  },
+  {
+    "id": "kael_drakkel",
+    "name": "Kael Drakkel",
+    "description": "The great city of the Kromzek frost giants in Velious. An enormous dungeon filled with powerful giant warriors, clerics, and their king.",
+    "expansion": "Velious",
+    "levelRange": [50, 60],
+    "factionRequired": null,
+    "monsters": ["kromzek_warrior", "kromzek_cleric", "kromzek_knight", "frost_giant", "giant_hound", "storm_giant"],
+    "boss": {
+      "id": "king_tormax",
+      "name": "King Tormax",
+      "spawnChance": 0.01,
+      "loot": ["tormax_axe", "kings_crown", "velium_boots", "kael_medal_of_valor"],
+      "respawnTicks": 500
+    },
+    "resources": ["velium_ore", "giant_skin", "frost_gem"]
+  },
+  {
+    "id": "sleepers_tomb",
+    "name": "Sleeper's Tomb",
+    "description": "The ancient tomb of the Sleeper Kerafyrm in Velious, guarded by the four Warders. An epic raid zone requiring extreme coordination and power.",
+    "expansion": "Velious",
+    "levelRange": [55, 60],
+    "factionRequired": "claws_of_veeshan",
+    "monsters": ["tomb_guardian", "ancient_construct", "velium_golem", "spirit_of_the_tomb", "warden_spirit", "planar_apparition"],
+    "boss": {
+      "id": "kerafyrm_warder",
+      "name": "Kerafyrm's Warder",
+      "spawnChance": 0.01,
+      "loot": ["warder_scale", "sleeper_relic", "ancient_velium_sword", "tomb_artifact"],
+      "respawnTicks": 700
+    },
+    "resources": ["velium_ore", "ancient_rune", "spirit_essence"]
+  },
+  {
+    "id": "crystal_caverns",
+    "name": "Crystal Caverns",
+    "description": "A vast cave system in Velious carved from giant crystal formations. Home to the Coldain dwarves' deepest fortifications and fearsome crystal creatures.",
+    "expansion": "Velious",
+    "levelRange": [40, 55],
+    "factionRequired": null,
+    "monsters": ["crystal_golem", "coldain_fighter", "kromrif_pawn", "ice_goblin", "frost_spider", "crystal_spider"],
+    "boss": {
+      "id": "dain_frostreaver",
+      "name": "Dain Frostreaver IV",
+      "spawnChance": 0.01,
+      "loot": ["dains_symbol", "frostreaver_axe", "coldain_ring_of_nine", "velium_gem"],
+      "respawnTicks": 400
+    },
+    "resources": ["crystal_shard", "ice_goblin_ear", "coldain_insignia_ring"]
+  }
+]

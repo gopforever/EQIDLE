@@ -1,0 +1,107 @@
+[
+  {
+    "id": "tunare",
+    "name": "Tunare",
+    "alignment": "good",
+    "allowedClasses": ["ranger", "druid", "paladin", "cleric"],
+    "boon": "Followers gain +10% healing effectiveness and +5% nature spell damage."
+  },
+  {
+    "id": "mithaniel_marr",
+    "name": "Mithaniel Marr",
+    "alignment": "good",
+    "allowedClasses": ["paladin", "warrior", "cleric", "bard"],
+    "boon": "Followers gain +5% damage against undead and +10 HP per level."
+  },
+  {
+    "id": "erollisi_marr",
+    "name": "Erollisi Marr",
+    "alignment": "good",
+    "allowedClasses": ["paladin", "cleric", "bard", "ranger"],
+    "boon": "Followers gain +5% mana regeneration and +10% charm/mez duration."
+  },
+  {
+    "id": "karana",
+    "name": "Karana",
+    "alignment": "good",
+    "allowedClasses": ["ranger", "druid", "cleric", "warrior"],
+    "boon": "Followers gain +15% movement speed and +5% outdoor combat damage."
+  },
+  {
+    "id": "rodcet_nife",
+    "name": "Rodcet Nife",
+    "alignment": "good",
+    "allowedClasses": ["cleric", "druid", "shaman", "paladin"],
+    "boon": "Followers gain +5% mana regeneration and disease/poison resistance."
+  },
+  {
+    "id": "quellious",
+    "name": "Quellious",
+    "alignment": "good",
+    "allowedClasses": ["monk", "cleric", "paladin", "enchanter"],
+    "boon": "Followers gain +10% mez duration and +5% HP regeneration when at peace."
+  },
+  {
+    "id": "brell_serilis",
+    "name": "Brell Serilis",
+    "alignment": "neutral",
+    "allowedClasses": ["warrior", "paladin", "cleric", "rogue", "shadowknight"],
+    "boon": "Followers gain +10 AC and +5% underground combat bonus."
+  },
+  {
+    "id": "bristlebane",
+    "name": "Bristlebane",
+    "alignment": "neutral",
+    "allowedClasses": ["rogue", "bard", "enchanter", "ranger"],
+    "boon": "Followers gain +5% gold from kills and +10% pick pocket success rate."
+  },
+  {
+    "id": "solusek_ro",
+    "name": "Solusek Ro",
+    "alignment": "neutral",
+    "allowedClasses": ["wizard", "magician", "enchanter", "necromancer"],
+    "boon": "Followers gain +10% fire spell damage and +5% mana pool."
+  },
+  {
+    "id": "the_tribunal",
+    "name": "The Tribunal",
+    "alignment": "neutral",
+    "allowedClasses": ["warrior", "paladin", "shadowknight", "cleric", "ranger"],
+    "boon": "Followers gain +5% experience gain and bonus faction with city guards."
+  },
+  {
+    "id": "innoruuk",
+    "name": "Innoruuk",
+    "alignment": "evil",
+    "allowedClasses": ["shadowknight", "necromancer", "enchanter", "cleric"],
+    "boon": "Followers gain +10% damage against good-aligned creatures and +5% lifetap healing."
+  },
+  {
+    "id": "cazic_thule",
+    "name": "Cazic-Thule",
+    "alignment": "evil",
+    "allowedClasses": ["shadowknight", "necromancer", "shaman"],
+    "boon": "Followers gain +10% fear spell duration and enemies have 5% chance to cower."
+  },
+  {
+    "id": "rallos_zek",
+    "name": "Rallos Zek",
+    "alignment": "evil",
+    "allowedClasses": ["warrior", "berserker", "shadowknight", "ranger", "beastlord"],
+    "boon": "Followers gain +10% melee damage and +5% double attack chance."
+  },
+  {
+    "id": "bertoxulous",
+    "name": "Bertoxxulous",
+    "alignment": "evil",
+    "allowedClasses": ["necromancer", "shadowknight", "shaman"],
+    "boon": "Followers gain +15% DoT damage and immunity to poison."
+  },
+  {
+    "id": "prexus",
+    "name": "Prexus",
+    "alignment": "neutral",
+    "allowedClasses": ["cleric", "druid", "shaman", "warrior", "monk"],
+    "boon": "Followers gain +5% mana regeneration when near water and +10% fishing skill."
+  }
+]

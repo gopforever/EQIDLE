@@ -1,0 +1,138 @@
+[
+  {
+    "id": "smithing",
+    "name": "Smithing",
+    "description": "The art of forging metal into weapons and armor. Smiths are invaluable to any adventuring party.",
+    "recipes": [
+      {"id": "sm_001", "name": "Bronze Short Sword", "trivial": 27, "components": ["bronze_ore", "smithing_hammer", "water_flask"], "result": "bronze_short_sword", "quantity": 1},
+      {"id": "sm_002", "name": "Bronze Plate Breastplate", "trivial": 68, "components": ["bronze_ore", "bronze_ore", "smithing_hammer", "water_flask"], "result": "bronze_plate_breastplate", "quantity": 1},
+      {"id": "sm_003", "name": "Short Sword", "trivial": 45, "components": ["iron_ore", "smithing_hammer", "water_flask"], "result": "short_sword", "quantity": 1},
+      {"id": "sm_004", "name": "Iron Shield", "trivial": 75, "components": ["iron_ore", "iron_ore", "smithing_hammer", "water_flask"], "result": "iron_shield", "quantity": 1},
+      {"id": "sm_005", "name": "Steel Plate Gauntlets", "trivial": 158, "components": ["steel_ore", "steel_ore", "smithing_hammer", "water_flask"], "result": "plate_gauntlets", "quantity": 1},
+      {"id": "sm_006", "name": "Orcish War Sword", "trivial": 122, "components": ["iron_ore", "iron_ore", "smithing_hammer", "coal"], "result": "orcish_war_sword", "quantity": 1},
+      {"id": "sm_007", "name": "Velium Boots", "trivial": 280, "components": ["velium_ore", "velium_ore", "smithing_hammer", "water_flask"], "result": "velium_boots", "quantity": 1},
+      {"id": "sm_008", "name": "Rusty Long Sword", "trivial": 20, "components": ["iron_ore", "smithing_hammer"], "result": "rusty_long_sword", "quantity": 1},
+      {"id": "sm_009", "name": "Bone Halberd", "trivial": 95, "components": ["bone_chips", "bone_chips", "iron_ore", "smithing_hammer"], "result": "bone_halberd", "quantity": 1},
+      {"id": "sm_010", "name": "Ancient Velium Sword", "trivial": 350, "components": ["velium_ore", "velium_ore", "velium_ore", "ancient_rune", "smithing_hammer"], "result": "ancient_velium_sword", "quantity": 1}
+    ]
+  },
+  {
+    "id": "tailoring",
+    "name": "Tailoring",
+    "description": "Crafting leather and cloth armor from various hides and silks. Tailors outfit rogues, monks, and spellcasters.",
+    "recipes": [
+      {"id": "ta_001", "name": "Wolf Skin Tunic", "trivial": 35, "components": ["wolf_pelt", "wolf_pelt", "thread", "needle"], "result": "wolf_skin_tunic", "quantity": 1},
+      {"id": "ta_002", "name": "Plain Leather Armor", "trivial": 22, "components": ["bear_pelt", "thread", "needle"], "result": "plain_leather_armor", "quantity": 1},
+      {"id": "ta_003", "name": "Tattered Cloak", "trivial": 18, "components": ["wolf_pelt", "thread", "needle"], "result": "tattered_cloak", "quantity": 1},
+      {"id": "ta_004", "name": "Plain Robe", "trivial": 30, "components": ["spiderling_silk", "spiderling_silk", "thread", "needle"], "result": "plain_robe", "quantity": 1},
+      {"id": "ta_005", "name": "Gnoll Fur Patch Cloak", "trivial": 45, "components": ["gnoll_fur_patch", "gnoll_fur_patch", "thread", "needle"], "result": "wolf_skin_tunic", "quantity": 1},
+      {"id": "ta_006", "name": "Spider Silk Belt", "trivial": 82, "components": ["spiderling_silk", "spiderling_silk", "spiderling_silk", "thread", "needle"], "result": "bandit_sash", "quantity": 1},
+      {"id": "ta_007", "name": "Mammoth Hide Cloak", "trivial": 165, "components": ["mammoth_hide", "mammoth_hide", "thread", "needle"], "result": "tattered_cloak", "quantity": 1},
+      {"id": "ta_008", "name": "Flowing Black Silk Sash", "trivial": 300, "components": ["drachnid_silk", "drachnid_silk", "thread", "needle", "dark_ember"], "result": "flowing_black_silk_sash", "quantity": 1},
+      {"id": "ta_009", "name": "Robe of the Oracle", "trivial": 325, "components": ["drachnid_silk", "drachnid_silk", "soul_crystal", "thread", "needle"], "result": "robe_of_the_oracle", "quantity": 1},
+      {"id": "ta_010", "name": "Leather Bracers", "trivial": 28, "components": ["wolf_pelt", "thread", "needle"], "result": "bracer_of_the_shadow", "quantity": 1}
+    ]
+  },
+  {
+    "id": "baking",
+    "name": "Baking",
+    "description": "Cooking food and drink that provides restorative benefits. A skilled baker can keep an entire guild well-fed.",
+    "recipes": [
+      {"id": "ba_001", "name": "Blackburrow Stout", "trivial": 21, "components": ["water_flask", "barley", "hops", "yeast"], "result": "blackburrow_stout", "quantity": 2},
+      {"id": "ba_002", "name": "Guk Mushroom Stew", "trivial": 42, "components": ["guk_mushroom", "guk_mushroom", "water_flask", "salt"], "result": "guk_mushroom", "quantity": 3},
+      {"id": "ba_003", "name": "Roasted Wolf", "trivial": 35, "components": ["wolf_pelt", "salt", "spices"], "result": "health_potion", "quantity": 1},
+      {"id": "ba_004", "name": "Bear Steak", "trivial": 55, "components": ["bear_pelt", "salt", "spices", "cooking_pot"], "result": "health_potion", "quantity": 2},
+      {"id": "ba_005", "name": "Mana Bread", "trivial": 75, "components": ["flour", "water_flask", "fire_opal_dust", "yeast"], "result": "mana_potion", "quantity": 1},
+      {"id": "ba_006", "name": "Wild Berry Pie", "trivial": 28, "components": ["wild_berries", "flour", "water_flask", "sugar"], "result": "health_potion", "quantity": 1},
+      {"id": "ba_007", "name": "Froglok Leg Roast", "trivial": 62, "components": ["froglok_leg", "salt", "spices", "cooking_pot"], "result": "health_potion", "quantity": 2},
+      {"id": "ba_008", "name": "Giant Meat Pie", "trivial": 95, "components": ["giant_skin", "flour", "water_flask", "salt", "cooking_pot"], "result": "health_potion", "quantity": 3},
+      {"id": "ba_009", "name": "Traveler's Ration", "trivial": 18, "components": ["flour", "water_flask", "salt"], "result": "health_potion", "quantity": 1},
+      {"id": "ba_010", "name": "Dragon Scale Broth", "trivial": 250, "components": ["dragon_scale", "water_flask", "salt", "rare_spices"], "result": "mana_potion", "quantity": 5}
+    ]
+  },
+  {
+    "id": "brewing",
+    "name": "Brewing",
+    "description": "The craft of creating ales, wines, and potions. Brewers supply adventurers with useful consumables.",
+    "recipes": [
+      {"id": "br_001", "name": "Health Potion", "trivial": 45, "components": ["water_flask", "bat_wing", "zombie_flesh", "fire_beetle_leg"], "result": "health_potion", "quantity": 1},
+      {"id": "br_002", "name": "Mana Potion", "trivial": 65, "components": ["water_flask", "fire_opal", "essence_of_fire", "spiderling_silk"], "result": "mana_potion", "quantity": 1},
+      {"id": "br_003", "name": "Ogre Swill", "trivial": 22, "components": ["water_flask", "barley", "hops"], "result": "blackburrow_stout", "quantity": 1},
+      {"id": "br_004", "name": "Elixir of Speed", "trivial": 135, "components": ["water_flask", "wolf_fang", "spiderling_silk", "fire_opal"], "result": "health_potion", "quantity": 1},
+      {"id": "br_005", "name": "Troll's Blood Brew", "trivial": 88, "components": ["water_flask", "giant_skin", "zombie_flesh", "salt"], "result": "health_potion", "quantity": 2},
+      {"id": "br_006", "name": "Spider Venom Extract", "trivial": 102, "components": ["spider_venom_sac", "water_flask", "venom_sac"], "result": "mana_potion", "quantity": 1},
+      {"id": "br_007", "name": "Frost Giant Ale", "trivial": 175, "components": ["water_flask", "frozen_gem", "barley", "velium_ore"], "result": "mana_potion", "quantity": 2},
+      {"id": "br_008", "name": "Fire Elemental Essence", "trivial": 150, "components": ["essence_of_fire", "water_flask", "fire_opal", "lava_rock"], "result": "mana_potion", "quantity": 2},
+      {"id": "br_009", "name": "Simple Ale", "trivial": 18, "components": ["water_flask", "barley", "yeast"], "result": "blackburrow_stout", "quantity": 2},
+      {"id": "br_010", "name": "Dragon Blood Wine", "trivial": 280, "components": ["dragon_scale", "water_flask", "fire_opal", "rare_spices"], "result": "mana_potion", "quantity": 5}
+    ]
+  },
+  {
+    "id": "fletching",
+    "name": "Fletching",
+    "description": "Crafting bows and arrows for ranged combat. Rangers rely on skilled fletchers to keep their quivers full.",
+    "recipes": [
+      {"id": "fl_001", "name": "Practice Arrow", "trivial": 21, "components": ["wood_shaft", "feather", "flint"], "result": "arrow", "quantity": 20},
+      {"id": "fl_002", "name": "Crude Shortbow", "trivial": 35, "components": ["wood_shaft", "wood_shaft", "string", "flint"], "result": "crude_shortbow", "quantity": 1},
+      {"id": "fl_003", "name": "Iron-Tipped Arrow", "trivial": 55, "components": ["wood_shaft", "feather", "iron_ore"], "result": "iron_arrow", "quantity": 20},
+      {"id": "fl_004", "name": "Longbow", "trivial": 95, "components": ["wood_shaft", "wood_shaft", "wood_shaft", "string"], "result": "longbow", "quantity": 1},
+      {"id": "fl_005", "name": "Bone Arrow", "trivial": 42, "components": ["wood_shaft", "feather", "bone_chips"], "result": "bone_arrow", "quantity": 15},
+      {"id": "fl_006", "name": "Velium Arrow", "trivial": 250, "components": ["wood_shaft", "feather", "velium_ore"], "result": "velium_arrow", "quantity": 20},
+      {"id": "fl_007", "name": "Dragon Bone Bow", "trivial": 320, "components": ["dragon_bone", "dragon_bone", "string", "velium_ore"], "result": "dragonbone_bow", "quantity": 1},
+      {"id": "fl_008", "name": "Silver Arrow", "trivial": 82, "components": ["wood_shaft", "feather", "silver_ore"], "result": "silver_arrow", "quantity": 20},
+      {"id": "fl_009", "name": "Fine Shortbow", "trivial": 68, "components": ["wood_shaft", "wood_shaft", "string", "flint", "feather"], "result": "fine_shortbow", "quantity": 1},
+      {"id": "fl_010", "name": "Cold Iron Arrow", "trivial": 120, "components": ["wood_shaft", "feather", "frozen_gem"], "result": "cold_iron_arrow", "quantity": 20}
+    ]
+  },
+  {
+    "id": "pottery",
+    "name": "Pottery",
+    "description": "Shaping clay into useful vessels and containers. Potters create items used in many other tradeskills.",
+    "recipes": [
+      {"id": "po_001", "name": "Small Pot", "trivial": 21, "components": ["clay", "water_flask", "kiln"], "result": "small_pot", "quantity": 1},
+      {"id": "po_002", "name": "Large Pot", "trivial": 45, "components": ["clay", "clay", "water_flask", "kiln"], "result": "large_pot", "quantity": 1},
+      {"id": "po_003", "name": "Firing Sheet", "trivial": 18, "components": ["clay", "water_flask"], "result": "firing_sheet", "quantity": 1},
+      {"id": "po_004", "name": "Sealed Flask", "trivial": 55, "components": ["clay", "clay", "water_flask", "kiln", "seal_wax"], "result": "sealed_flask", "quantity": 1},
+      {"id": "po_005", "name": "Cooking Pot", "trivial": 68, "components": ["clay", "clay", "iron_ore", "water_flask", "kiln"], "result": "cooking_pot", "quantity": 1},
+      {"id": "po_006", "name": "Decorative Vase", "trivial": 82, "components": ["clay", "clay", "dye", "water_flask", "kiln"], "result": "decorative_vase", "quantity": 1},
+      {"id": "po_007", "name": "Medicine Jar", "trivial": 95, "components": ["clay", "seal_wax", "water_flask", "kiln"], "result": "medicine_jar", "quantity": 1},
+      {"id": "po_008", "name": "Dragon Scale Bowl", "trivial": 200, "components": ["clay", "dragon_scale", "water_flask", "kiln"], "result": "dragon_scale_bowl", "quantity": 1},
+      {"id": "po_009", "name": "Gem Setting", "trivial": 120, "components": ["clay", "fire_opal", "water_flask", "kiln"], "result": "gem_setting", "quantity": 1},
+      {"id": "po_010", "name": "Ancient Vessel", "trivial": 280, "components": ["clay", "clay", "velium_ore", "ancient_rune", "water_flask", "kiln"], "result": "ancient_vessel", "quantity": 1}
+    ]
+  },
+  {
+    "id": "jewelcraft",
+    "name": "Jewelcraft",
+    "description": "Cutting and setting gems into rings, earrings, and amulets. Jewelers craft the finest magic items in Norrath.",
+    "recipes": [
+      {"id": "jc_001", "name": "Silver Ring", "trivial": 28, "components": ["silver_ore", "silver_ore", "jewelers_kit"], "result": "silver_ring", "quantity": 1},
+      {"id": "jc_002", "name": "Emerald Ring", "trivial": 95, "components": ["silver_ore", "fire_opal", "jewelers_kit"], "result": "emerald_ring", "quantity": 1},
+      {"id": "jc_003", "name": "Fang Earring", "trivial": 42, "components": ["wolf_fang", "silver_ore", "jewelers_kit"], "result": "fang_earring", "quantity": 1},
+      {"id": "jc_004", "name": "Gnoll Fang Necklace", "trivial": 35, "components": ["gnoll_fang", "gnoll_fang", "string", "jewelers_kit"], "result": "gnoll_fang_necklace", "quantity": 1},
+      {"id": "jc_005", "name": "Fire Opal Ring", "trivial": 125, "components": ["gold_ore", "fire_opal", "jewelers_kit"], "result": "emerald_ring", "quantity": 1},
+      {"id": "jc_006", "name": "Frozen Gem Earring", "trivial": 165, "components": ["silver_ore", "frozen_gem", "jewelers_kit"], "result": "fang_earring", "quantity": 1},
+      {"id": "jc_007", "name": "Coldain Insignia Ring", "trivial": 200, "components": ["gold_ore", "crystal_shard", "velium_ore", "jewelers_kit"], "result": "coldain_insignia_ring", "quantity": 1},
+      {"id": "jc_008", "name": "Velium Gem Setting", "trivial": 240, "components": ["velium_ore", "velium_ore", "frost_gem", "jewelers_kit"], "result": "emerald_ring", "quantity": 1},
+      {"id": "jc_009", "name": "Dragon Scale Pendant", "trivial": 300, "components": ["dragon_scale", "gold_ore", "string", "jewelers_kit"], "result": "sathirs_totem", "quantity": 1},
+      {"id": "jc_010", "name": "Manastone Replica", "trivial": 350, "components": ["soul_crystal", "soul_crystal", "dark_ember", "gold_ore", "jewelers_kit"], "result": "manastone", "quantity": 1}
+    ]
+  },
+  {
+    "id": "research",
+    "name": "Research",
+    "description": "The study of ancient texts and magical formulae to create new spells. Only the most learned scholars can master research.",
+    "recipes": [
+      {"id": "re_001", "name": "Minor Healing Scroll", "trivial": 21, "components": ["blank_scroll", "quill", "enchanted_ink"], "result": "spell_scroll", "quantity": 1},
+      {"id": "re_002", "name": "Fear Scroll", "trivial": 68, "components": ["blank_scroll", "quill", "bat_wing", "enchanted_ink"], "result": "spell_scroll", "quantity": 1},
+      {"id": "re_003", "name": "Snare Scroll", "trivial": 35, "components": ["blank_scroll", "quill", "spiderling_silk", "enchanted_ink"], "result": "spell_scroll", "quantity": 1},
+      {"id": "re_004", "name": "Fireball Scroll", "trivial": 55, "components": ["blank_scroll", "quill", "fire_beetle_leg", "enchanted_ink"], "result": "spell_scroll", "quantity": 1},
+      {"id": "re_005", "name": "Root Scroll", "trivial": 42, "components": ["blank_scroll", "quill", "bone_chips", "enchanted_ink"], "result": "spell_scroll", "quantity": 1},
+      {"id": "re_006", "name": "Lifetap Scroll", "trivial": 85, "components": ["blank_scroll", "quill", "zombie_flesh", "dark_ember", "enchanted_ink"], "result": "spell_scroll", "quantity": 1},
+      {"id": "re_007", "name": "Clarity Scroll", "trivial": 120, "components": ["blank_scroll", "quill", "soul_crystal", "enchanted_ink"], "result": "spell_scroll", "quantity": 1},
+      {"id": "re_008", "name": "Ice Comet Research", "trivial": 250, "components": ["blank_scroll", "quill", "frozen_gem", "velium_ore", "enchanted_ink"], "result": "spell_scroll", "quantity": 1},
+      {"id": "re_009", "name": "Torpor Research", "trivial": 300, "components": ["blank_scroll", "quill", "soul_crystal", "dark_ember", "mammoth_hide", "enchanted_ink"], "result": "spell_scroll", "quantity": 1},
+      {"id": "re_010", "name": "Complete Heal Research", "trivial": 350, "components": ["blank_scroll", "quill", "dragon_scale", "soul_crystal", "enchanted_ink"], "result": "spell_scroll", "quantity": 1}
+    ]
+  }
+]
